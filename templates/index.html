@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHI AUTO - Прокат авто</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Верхняя панель навигации -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <span class="nav-item active">Все</span>
+                <span class="nav-item">Авто</span>
+                <span class="nav-item">Город</span>
+            </div>
+        </nav>
+
+        <!-- Заголовок -->
+        <header class="header">
+            <h1>CHI AUTO</h1>
+            <p class="subtitle">прокат авто</p>
+        </header>
+
+        <!-- Карточки автомобилей -->
+        <div class="cars-grid">
+            <!-- Карточка 1 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="{{ url_for('static', filename='images/toyota_corolla.jpg') }}" alt="Toyota Corolla Fielder">
+                </div>
+                <div class="car-info">
+                    <h3>Toyota Corolla Fielder</h3>
+                    <p class="year">2006 г.</p>
+
+                    <div class="car-details-grid">
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-car'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Марка</span>
+                                <span class="detail-value">Toyota Corolla Fielder</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-calendar'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Год</span>
+                                <span class="detail-value">2006 г.</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-chip'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Двигатель</span>
+                                <span class="detail-value">1.5/110 лс/Бензин</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Город</span>
+                                <span class="detail-value">Иркутск</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-tachometer'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Пробег</span>
+                                <span class="detail-value">317 000 км</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-body'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Кузов</span>
+                                <span class="detail-value">Универсал</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-navigation'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Руль</span>
+                                <span class="detail-value">Правый</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-cog'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Трансмиссия</span>
+                                <span class="detail-value">АКПП</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-circle'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Шины</span>
+                                <span class="detail-value">Зима</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability available">В наличии</div>
+                </div>
+
+                <div class="rental-info">
+                    <div class="price-section">
+                        <div class="price-row">
+                            <span>Цена на сутки</span>
+                            <span class="price">2 500 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-details">Подробнее</button>
+                    <button class="btn-rent" onclick="openRentModal('Toyota Corolla Fielder')">Арендовать</button>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="{{ url_for('static', filename='images/ford_kuga.jpg') }}" alt="Ford Kuga">
+                </div>
+                <div class="car-info">
+                    <h3>FORD KUGA</h3>
+                    <p class="year">2013 г.</p>
+
+                    <div class="car-details-grid">
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-car'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Марка</span>
+                                <span class="detail-value">FORD KUGA</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-calendar'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Год</span>
+                                <span class="detail-value">2013 г.</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-chip'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Двигатель</span>
+                                <span class="detail-value">1.6/150 лс/Бензин</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Город</span>
+                                <span class="detail-value">Иркутск</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-tachometer'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Пробег</span>
+                                <span class="detail-value">195 320 км</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-body'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Кузов</span>
+                                <span class="detail-value">Кроссовер</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-navigation'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Руль</span>
+                                <span class="detail-value">Левый</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-cog'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Трансмиссия</span>
+                                <span class="detail-value">АКПП</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-circle">
+                                <i class='bx bx-circle'></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">Шины</span>
+                                <span class="detail-value">Лето</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability not-available">Не доступен</div>
+                </div>
+
+                <div class="rental-info">
+                    <div class="price-section">
+                        <div class="price-row">
+                            <span>Цена на сутки</span>
+                            <span class="price">3 800 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-details">Подробнее</button>
+                    <button class="btn-rent" onclick="openRentModal('FORD KUGA')" disabled>Арендовать</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя панель навигации -->
+        <nav class="bottom-nav">
+            <div class="nav-item">Главная</div>
+            <div class="nav-item">Мои заказы</div>
+            <div class="nav-item">Обучение</div>
+            <div class="nav-item">FAQ</div>
+        </nav>
+    </div>
+
+    <!-- Контейнер для модального окна -->
+    <div id="modalContainer"></div>
+
+    <script>
+        // Функция для загрузки модального окна
+        async function openRentModal(carName) {
+            try {
+                const response = await fetch('/rent-modal');
+                const html = await response.text();
+
+                document.getElementById('modalContainer').innerHTML = html;
+
+                // Устанавливаем название автомобиля
+                document.getElementById('selectedCar').textContent = carName;
+
+                // Показываем модальное окно
+                document.getElementById('rentModal').style.display = 'flex';
+
+            } catch (error) {
+                console.error('Ошибка загрузки модального окна:', error);
+            }
+        }
+
+        // Функция закрытия модального окна (будет в отдельном файле)
+        function closeRentModal() {
+            const modal = document.getElementById('rentModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Закрытие модального окна при клике вне его
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('rentModal');
+            if (event.target === modal) {
+                closeRentModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #0f172a;
+    min-height: 100vh;
+    color: #e2e8f0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Верхняя навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav-left {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #334155;
+}
+
+.nav-item.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.nav-item:hover {
+    background: #334155;
+}
+
+/* Заголовок */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+/* Карточки автомобилей */
+.cars-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 80px;
+}
+
+.car-card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+/* ... предыдущие стили остаются без изменений ... */
+
+/* Изображение автомобиля */
+.car-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: #374151;
+    position: relative;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.car-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Заглушка если фото не загрузилось */
+.car-image img:before {
+    content: "Фото автомобиля";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+/* ... остальные стили без изменений ... */
+
+/* Информация об автомобиле */
+.car-info {
+    padding: 16px;
+    background: #374151;
+    border-bottom: 1px solid #4b5563;
+}
+
+.car-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.car-info .year {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Сетка деталей автомобиля */
+.car-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.detail-item i {
+    font-size: 16px;
+    color: #3b82f6;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-label {
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Статус доступности */
+.availability {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.availability.available {
+    background: #10b981;
+    color: white;
+}
+
+.availability.not-available {
+    background: #ef4444;
+    color: white;
+}
+
+/* Информация о прокате */
+.rental-info {
+    background: #374151;
+    padding: 16px;
+    border-bottom: 1px solid #4b5563;
+}
+
+.price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-row span:first-child {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.price {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Кнопки действий */
+.actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: #374151;
+}
+
+.btn-details {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    background: transparent;
+    color: #3b82f6;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-rent {
+    flex: 1;
+    padding: 14px;
+    background: #10b981;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-rent:disabled {
+    background: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-details:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-rent:hover:not(:disabled) {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+/* Нижняя навигация */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #374151;
+}
+
+.bottom-nav .nav-item {
+    background: none;
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav .nav-item:hover {
+    background: #374151;
+    color: #3b82f6;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .car-card {
+        border-radius: 14px;
+    }
+
+    .nav-left {
+        gap: 10px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .car-image {
+        height: 150px;
+    }
+
+    .car-info,
+    .rental-info,
+    .actions {
+        padding: 14px;
+    }
+
+    .car-details-grid {
+        gap: 10px;
+    }
+
+    .detail-label {
+        font-size: 10px;
+    }
+
+    .detail-value {
+        font-size: 11px;
+    }
+}
+/* ... предыдущие стили остаются без изменений ... */
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #1e293b;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    background: #3b82f6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Информация о менеджере */
+.manager-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.manager-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b82f6;
+    flex-shrink: 0;
+}
+
+.manager-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manager-details {
+    flex: 1;
+}
+
+.manager-details h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.welcome-text {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+#selectedCar {
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.contact-item i {
+    color: #3b82f6;
+    font-size: 16px;
+}
+
+/* Кнопки соцсетей */
+.social-buttons {
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.social-btn i {
+    font-size: 20px;
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-btn.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.social-btn.vk {
+    background: #4C75A3;
+    color: white;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Футер описания */
+.footer-description {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    font-style: italic;
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+}
+
+/* Адаптивность для модального окна */
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 10px;
+    }
+
+    .manager-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .manager-photo {
+        align-self: center;
+    }
+
+    .social-btn {
+        padding: 14px 20px;
+    }
+}

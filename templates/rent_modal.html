@@ -1,0 +1,64 @@
+<!-- Модальное окно аренды -->
+<div id="rentModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>CHI AUTO</h2>
+            <span class="close" onclick="closeRentModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="manager-info">
+                <div class="manager-photo">
+                    <img src="{{ url_for('static', filename='images/manager.jpg') }}" alt="Менеджер">
+                </div>
+                <div class="manager-details">
+                    <h3>Приветствуем вас!</h3>
+                    <p class="welcome-text">Хотите арендовать автомобиль <span id="selectedCar"></span>?</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <span>+7 (995) 051-61-45</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-map'></i>
+                            <span>г. Иркутск, ул. Ленина, 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-buttons">
+                <p class="contact-text">Свяжитесь с менеджером:</p>
+                <div class="social-links">
+                    <a href="https://wa.me/79950516145" target="_blank" class="social-btn whatsapp">
+                        <i class='bx bxl-whatsapp'></i>
+                        WhatsApp
+                    </a>
+                    <a href="https://t.me/PSergei007" target="_blank" class="social-btn telegram">
+                        <i class='bx bxl-telegram'></i>
+                        Telegram
+                    </a>
+                    <a href="https://vk.com" target="_blank" class="social-btn vk">
+                        <i class='bx bxl-vk'></i>
+                        VK
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-description">Профессиональный подбор автомобилей с гарантией качества</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Функция закрытия модального окна
+    function closeRentModal() {
+        document.getElementById('rentModal').style.display = 'none';
+    }
+
+    // Закрытие при нажатии ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeRentModal();
+        }
+    });
+</script>
