@@ -1,0 +1,139 @@
+<!-- Модальное окно FAQ -->
+<div id="faqModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Частые вопросы</h2>
+            <span class="close" onclick="closeModal('faqModal')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="faq-section">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Какие документы нужны для аренды?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Для аренды автомобиля необходим паспорт и действующее водительское удостоверение категории B.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Каков минимальный срок аренды?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Минимальный срок аренды - 1 сутки. При аренде на неделю и более действуют специальные скидки.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Что включено в стоимость аренды?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>В стоимость включены: КАСКО, техобслуживание, замена шин по сезону. Топливо оплачивается отдельно.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Можно ли выезжать за город?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, все наши автомобили можно использовать для поездок за город. Ограничений по пробегу нет.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Что делать в случае ДТП?</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Немедленно свяжитесь с нашим менеджером по телефону +7 (995) 051-61-45 и следуйте инструкциям.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-contact" style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #334155;">
+                    <p style="color: #94a3b8; text-align: center; margin: 0;">
+                        Не нашли ответ? <a href="javascript:void(0)" onclick="closeModal('faqModal'); openPage('contacts');" style="color: #3b82f6; text-decoration: none;">Свяжитесь с нами</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.faq-section {
+    padding: 10px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.faq-question i {
+    color: #3b82f6;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 15px 15px 15px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: #cbd5e1;
+    margin: 0;
+    line-height: 1.4;
+}
+</style>
+
+<script>
+// Активация FAQ аккордеона
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+});
+</script>

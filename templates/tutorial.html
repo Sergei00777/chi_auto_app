@@ -1,0 +1,116 @@
+<!-- Модальное окно обучения -->
+<div id="tutorialModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Обучение</h2>
+            <span class="close" onclick="closeModal('tutorialModal')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="tutorial-section">
+                <h3 style="color: white; margin-bottom: 20px;">Как пользоваться сайтом</h3>
+
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Выбор автомобиля</h4>
+                            <p>Просмотрите доступные автомобили в каталоге. Нажмите "Подробнее" для детальной информации.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Просмотр деталей</h4>
+                            <p>Изучите характеристики, фото и видео автомобиля. Убедитесь, что он подходит вам.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Аренда</h4>
+                            <p>Нажмите кнопку "Арендовать" и свяжитесь с менеджером через удобный мессенджер.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Получение авто</h4>
+                            <p>Заберите автомобиль в нашем офисе по адресу: г. Иркутск, ул. Ленина, 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutorial-tips">
+                    <h4 style="color: #3b82f6; margin: 25px 0 15px 0;">Полезные советы</h4>
+                    <ul style="color: #cbd5e1; padding-left: 20px;">
+                        <li>Бронируйте автомобиль заранее</li>
+                        <li>Имейте при себе водительское удостоверение</li>
+                        <li>Уточняйте условия аренды у менеджера</li>
+                        <li>Проверяйте автомобиль при получении</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.tutorial-section {
+    padding: 10px;
+}
+
+.tutorial-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: #3b82f6;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.step-content p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.tutorial-tips ul {
+    margin: 0;
+}
+
+.tutorial-tips li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+</style>

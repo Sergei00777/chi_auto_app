@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="actions">
-                    <button class="btn-details">Подробнее</button>
+                    <button class="btn-details" onclick="window.location.href='/car-detail'">Подробнее</button>
                     <button class="btn-rent" onclick="openRentModal('Toyota Corolla Fielder')">Арендовать</button>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                 </div>
 
                 <div class="actions">
-                    <button class="btn-details">Подробнее</button>
+                    <button class="btn-details" onclick="window.location.href='/car-detail'">Подробнее</button>
                     <button class="btn-rent" onclick="openRentModal('FORD KUGA')" disabled>Арендовать</button>
                 </div>
             </div>
@@ -251,37 +251,34 @@
 
         <!-- Нижняя панель навигации -->
         <nav class="bottom-nav">
-            <div class="nav-item">Главная</div>
-            <div class="nav-item">Мои заказы</div>
-            <div class="nav-item">Обучение</div>
-            <div class="nav-item">FAQ</div>
+            <div class="nav-item" onclick="openPage('main')">Главная</div>
+            <div class="nav-item" onclick="openPage('contacts')">Контакты</div>
+            <div class="nav-item" onclick="openPage('tutorial')">Обучение</div>
+            <div class="nav-item" onclick="openPage('faq')">FAQ</div>
         </nav>
     </div>
 
-    <!-- Контейнер для модального окна -->
+    <!-- Контейнер для модального окна аренды -->
     <div id="modalContainer"></div>
 
+    <!-- Контейнер для динамического контента -->
+    <div id="pageContainer"></div>
+
     <script>
-        // Функция для загрузки модального окна
+        // Функция для загрузки модального окна аренды
         async function openRentModal(carName) {
             try {
                 const response = await fetch('/rent-modal');
                 const html = await response.text();
-
                 document.getElementById('modalContainer').innerHTML = html;
-
-                // Устанавливаем название автомобиля
                 document.getElementById('selectedCar').textContent = carName;
-
-                // Показываем модальное окно
                 document.getElementById('rentModal').style.display = 'flex';
-
             } catch (error) {
                 console.error('Ошибка загрузки модального окна:', error);
             }
         }
 
-        // Функция закрытия модального окна (будет в отдельном файле)
+        // Функция закрытия модального окна аренды
         function closeRentModal() {
             const modal = document.getElementById('rentModal');
             if (modal) {
@@ -289,13 +286,67 @@
             }
         }
 
-        // Закрытие модального окна при клике вне его
+        // Функция для загрузки страниц
+        async function openPage(pageType) {
+            try {
+                const response = await fetch(`/${pageType}`);
+                const html = await response.text();
+                document.getElementById('pageContainer').innerHTML = html;
+
+                // Показываем модальное окно
+                const modal = document.getElementById(`${pageType}Modal`);
+                if (modal) {
+                    modal.style.display = 'flex';
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки страницы:', error);
+            }
+        }
+
+        // Функция закрытия модальных окон
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Закрытие при клике вне окна
         document.addEventListener('click', function(event) {
-            const modal = document.getElementById('rentModal');
-            if (event.target === modal) {
+            // Закрытие модального окна аренды
+            const rentModal = document.getElementById('rentModal');
+            if (rentModal && event.target === rentModal) {
                 closeRentModal();
             }
+
+            // Закрытие других модальных окон
+            const modals = ['contactsModal', 'tutorialModal', 'faqModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (modal && event.target === modal) {
+                    closeModal(modalId);
+                }
+            });
         });
+
+        // Закрытие при нажатии ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                // Закрытие модального окна аренды
+                closeRentModal();
+
+                // Закрытие других модальных окон
+                const modals = ['contactsModal', 'tutorialModal', 'faqModal'];
+                modals.forEach(modalId => {
+                    closeModal(modalId);
+                });
+            }
+        });
+
+        // Обработка кнопки "Главная"
+        function openMainPage() {
+            window.location.href = '/';
+        }
     </script>
 </body>
 </html>

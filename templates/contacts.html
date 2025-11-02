@@ -1,0 +1,127 @@
+<!-- Модальное окно контактов -->
+<div id="contactsModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Контакты</h2>
+            <span class="close" onclick="closeModal('contactsModal')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="contact-section">
+                <h3 style="color: white; margin-bottom: 20px;">CHI AUTO - Прокат авто</h3>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class='bx bx-phone'></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Телефон</span>
+                            <span class="contact-value">+7 (995) 051-61-45</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class='bx bx-map'></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Адрес</span>
+                            <span class="contact-value">г. Иркутск, ул. Ленина, 1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class='bx bx-time'></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Режим работы</span>
+                            <span class="contact-value">Ежедневно 9:00 - 21:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h4 style="color: #cbd5e1; margin: 25px 0 15px 0;">Мессенджеры</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/79950516145" target="_blank" class="social-btn whatsapp">
+                            <i class='bx bxl-whatsapp'></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://t.me/PSergei007" target="_blank" class="social-btn telegram">
+                            <i class='bx bxl-telegram'></i>
+                            Telegram
+                        </a>
+                        <a href="https://vk.com" target="_blank" class="social-btn vk">
+                            <i class='bx bxl-vk'></i>
+                            VK
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <h4 style="color: #cbd5e1; margin: 25px 0 15px 0;">Мы на карте</h4>
+                    <div class="map-placeholder">
+                        <i class='bx bx-map' style="font-size: 48px; color: #3b82f6;"></i>
+                        <p>г. Иркутск, ул. Ленина, 1</p>
+                        <small style="color: #94a3b8;">Карта будет загружена здесь</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.contact-section {
+    padding: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #334155;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.contact-value {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.map-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    text-align: center;
+}
+</style>
