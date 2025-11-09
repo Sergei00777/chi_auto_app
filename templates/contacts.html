@@ -5,7 +5,7 @@
             <h2>Контакты</h2>
             <span class="close" onclick="closeModal('contactsModal')">&times;</span>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
             <div class="contact-section">
                 <h3 style="color: white; margin-bottom: 20px;">CHI AUTO - Прокат авто</h3>
 
@@ -13,8 +13,16 @@
                     <div class="contact-item">
                         <i class='bx bx-phone'></i>
                         <div class="contact-details">
-                            <span class="contact-label">Телефон</span>
+                            <span class="contact-label">Основной телефон</span>
                             <span class="contact-value">+7 (995) 051-61-45</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class='bx bx-phone'></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Дополнительный телефон</span>
+                            <span class="contact-value">+7 (924) 530-48-14</span>
                         </div>
                     </div>
 
@@ -22,7 +30,8 @@
                         <i class='bx bx-map'></i>
                         <div class="contact-details">
                             <span class="contact-label">Адрес</span>
-                            <span class="contact-value">г. Иркутск, ул. Ленина, 1</span>
+                            <span class="contact-value">ул. Ширямова, 2/6, Иркутск</span>
+                            <small style="color: #94a3b8; font-size: 12px;">Октябрьский район, 664009</small>
                         </div>
                     </div>
 
@@ -30,7 +39,8 @@
                         <i class='bx bx-time'></i>
                         <div class="contact-details">
                             <span class="contact-label">Режим работы</span>
-                            <span class="contact-value">Ежедневно 9:00 - 21:00</span>
+                            <span class="contact-value">Ежедневно 9:00 - 19:00</span>
+                            <small style="color: #94a3b8; font-size: 12px;">Аренда автомобилей 24/7</small>
                         </div>
                     </div>
                 </div>
@@ -46,19 +56,46 @@
                             <i class='bx bxl-telegram'></i>
                             Telegram
                         </a>
-                        <a href="https://vk.com" target="_blank" class="social-btn vk">
-                            <i class='bx bxl-vk'></i>
-                            VK
-                        </a>
                     </div>
                 </div>
 
-                <div class="map-section">
-                    <h4 style="color: #cbd5e1; margin: 25px 0 15px 0;">Мы на карте</h4>
-                    <div class="map-placeholder">
-                        <i class='bx bx-map' style="font-size: 48px; color: #3b82f6;"></i>
-                        <p>г. Иркутск, ул. Ленина, 1</p>
-                        <small style="color: #94a3b8;">Карта будет загружена здесь</small>
+                <div class="contacts-map">
+                    <h4 style="color: #cbd5e1; margin: 25px 0 15px 0;">Мы находимся</h4>
+                    <div style="width: 100%; height: 300px; border-radius: 12px; margin-top: 1rem; background: #1e293b; overflow: hidden; border: 1px solid #334155;">
+                        <img src="/static/images/карта ЧИ-АВТО.png" alt="CHI AUTO - расположение компании" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                    </div>
+                    <p style="text-align: center; color: #94a3b8; font-size: 14px; margin-top: 10px;">
+                        ул. Ширямова, 2/6, Октябрьский район, Иркутск
+                    </p>
+                </div>
+
+                <div class="additional-info" style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #334155;">
+                    <h4 style="color: #cbd5e1; margin-bottom: 15px;">Дополнительная информация</h4>
+                    <div style="color: #94a3b8; font-size: 14px; line-height: 1.5;">
+                        <p style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <svg style="width: 16px; height: 16px; margin-right: 10px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" fill="#60a5fa"/>
+                            </svg>
+                            Компания по прокату автомобилей
+                        </p>
+                        <p style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <svg style="width: 16px; height: 16px; margin-right: 10px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#34d399"/>
+                            </svg>
+                            Все автомобили в идеальном состоянии
+                        </p>
+                        <p style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <svg style="width: 16px; height: 16px; margin-right: 10px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="#fbbf24"/>
+                            </svg>
+                            Полный пакет документов для физ. и юр. лиц
+                        </p>
+                        <p style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <svg style="width: 16px; height: 16px; margin-right: 10px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" fill="#a78bfa"/>
+                            </svg>
+                            Любая форма оплаты
+                        </p>
                     </div>
                 </div>
             </div>
@@ -73,7 +110,7 @@
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     padding: 15px;
     background: #1e293b;
@@ -86,12 +123,14 @@
     font-size: 24px;
     color: #3b82f6;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    flex: 1;
 }
 
 .contact-label {
@@ -112,16 +151,67 @@
     gap: 10px;
 }
 
-.map-placeholder {
+.social-btn {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    background: #1e293b;
+    gap: 10px;
+    padding: 14px 20px;
     border-radius: 12px;
-    border: 1px solid #334155;
-    color: #cbd5e1;
-    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.social-btn i {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-btn.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для скролла */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Стили для картинки расположения */
+.contacts-map {
+    margin-top: 20px;
 }
 </style>
+
+<script>
+// Удалены все функции связанные с Яндекс картами, так как теперь используется статическое изображение
+</script>

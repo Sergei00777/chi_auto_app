@@ -791,22 +791,85 @@
         }
 
         // Функция для загрузки страниц
-        async function openPage(pageType) {
-            try {
-                const response = await fetch(`/${pageType}`);
-                const html = await response.text();
-                document.getElementById('pageContainer').innerHTML = html;
+async function openPage(pageType) {
+    try {
+        const response = await fetch(`/${pageType}`);
+        const html = await response.text();
+        document.getElementById('pageContainer').innerHTML = html;
 
-                // Показываем модальное окно
-                const modal = document.getElementById(`${pageType}Modal`);
-                if (modal) {
-                    modal.style.display = 'flex';
-                }
-            } catch (error) {
-                console.error('Ошибка загрузки страницы:', error);
+        // Показываем модальное окно
+        const modal = document.getElementById(`${pageType}Modal`);
+        if (modal) {
+            modal.style.display = 'flex';
+
+            // Инициализируем FAQ если открыли FAQ страницу
+            if (pageType === 'faq') {
+                setTimeout(() => {
+                    // Переинициализируем FAQ после загрузки
+                    const faqQuestions = document.querySelectorAll('.faq-question');
+                    faqQuestions.forEach(question => {
+                        question.addEventListener('click', function() {
+                            const faqItem = this.parentElement;
+                            const isActive = faqItem.classList.contains('active');
+
+                            // Закрываем все другие открытые вопросы
+                            document.querySelectorAll('.faq-item.active').forEach(item => {
+                                if (item !== faqItem) {
+                                    item.classList.remove('active');
+                                }
+                            });
+
+                            // Переключаем текущий вопрос
+                            if (!isActive) {
+                                faqItem.classList.add('active');
+                            } else {
+                                faqItem.classList.remove('active');
+                            }
+                        });
+                    });
+
+                    // Автоматически открываем первый вопрос
+                    const firstFaqItem = document.querySelector('.faq-item');
+                    if (firstFaqItem && !firstFaqItem.classList.contains('active')) {
+                        firstFaqItem.classList.add('active');
+                    }
+
+                    // Инициализируем поиск
+                    const searchInput = document.getElementById('faqSearch');
+                    if (searchInput) {
+                        searchInput.addEventListener('input', function(e) {
+                            const query = e.target.value.toLowerCase().trim();
+                            const faqItems = document.querySelectorAll('.faq-item');
+
+                            if (query === '') {
+                                faqItems.forEach(item => {
+                                    item.style.display = 'block';
+                                });
+                                return;
+                            }
+
+                            faqItems.forEach(item => {
+                                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+
+                                if (question.includes(query) || answer.includes(query)) {
+                                    item.style.display = 'block';
+                                    if (!item.classList.contains('active')) {
+                                        item.classList.add('active');
+                                    }
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        });
+                    }
+                }, 100);
             }
         }
-
+    } catch (error) {
+        console.error('Ошибка загрузки страницы:', error);
+    }
+}
         // Функция закрытия модальных окон
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
