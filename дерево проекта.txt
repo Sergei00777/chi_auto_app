@@ -1,0 +1,31 @@
+templates/
+├── index.html
+├── car_detail.html (для Toyota Corolla)
+├── lynk_co.html
+├── mitsubishi_l200.html
+├── toyota_land_cruiser_200.html
+├── geely_icon.html
+├── haval_f7.html
+├── geely_jiaji.html
+├── lixiang_l7.html
+├── geely_xingyue.html
+├── geely_coolray.html
+├── rent_modal.html
+├── contacts.html
+├── tutorial.html
+└── faq.html
+
+static/
+├── css/
+│   └── style.css
+└── images/
+    ├── toyota_corolla.jpg
+    ├── lynk_co.jpg
+    ├── mitsubishi_l200.jpg
+    ├── toyota_land_cruiser_200.jpg
+    ├── geely_icon.jpg
+    ├── haval_f7.jpg
+    ├── geely_jiaji.jpg
+    ├── lixiang_l7.jpg
+    ├── geely_xingyue.jpg
+    └── geely_coolray.jpg

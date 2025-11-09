@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда Mitsubishi L200 - CHI AUTO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="/" class="btn-back">
+            <i class='bx bx-arrow-back'></i>
+            Назад к каталогу
+        </a>
+
+        <!-- Основная информация -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="{{ url_for('static', filename='images/mitsubishi_l200.jpg') }}" alt="Mitsubishi L200">
+            </div>
+            <div class="car-info">
+                <h3>Mitsubishi L200</h3>
+                <p class="year">2020 г.</p>
+
+                <div class="price-section">
+                    <div class="price-row">
+                        <span>Цена на сутки</span>
+                        <span class="price">4 500 ₽</span>
+                    </div>
+                </div>
+
+                <div class="availability available">В наличии</div>
+            </div>
+
+            <div class="actions">
+                <button class="btn-rent" onclick="openRentModal('Mitsubishi L200')">Арендовать</button>
+            </div>
+        </div>
+
+        <!-- Табы для переключения разделов -->
+        <div class="car-detail-tabs">
+            <button class="car-tab active" onclick="openTab('info')">Информация</button>
+            <button class="car-tab" onclick="openTab('photos')">Фото</button>
+            <button class="car-tab" onclick="openTab('videos')">Видео</button>
+        </div>
+
+        <!-- Контент табов -->
+        <div id="info" class="tab-content active">
+            <div class="detail-specs">
+                <div class="spec-group">
+                    <h4>Основные характеристики</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Марка и модель</span>
+                        <span class="spec-value">Mitsubishi L200</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Год выпуска</span>
+                        <span class="spec-value">2020</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Пробег</span>
+                        <span class="spec-value">78 000 км</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Состояние</span>
+                        <span class="spec-value">Отличное</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Класс</span>
+                        <span class="spec-value">Пикап</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Двигатель и трансмиссия</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Двигатель</span>
+                        <span class="spec-value">2.4L Turbo Дизель</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Мощность</span>
+                        <span class="spec-value">181 л.с.</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Крутящий момент</span>
+                        <span class="spec-value">430 Н·м</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Коробка передач</span>
+                        <span class="spec-value">Автоматическая 6-ступенчатая</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Привод</span>
+                        <span class="spec-value">Полный (4WD)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Экстерьер и интерьер</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Тип кузова</span>
+                        <span class="spec-value">Пикап, двойная кабина</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Цвет</span>
+                        <span class="spec-value">Белый</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Расположение руля</span>
+                        <span class="spec-value">Левый</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Количество мест</span>
+                        <span class="spec-value">5</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Грузоподъемность</span>
+                        <span class="spec-value">1 065 кг</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Комфорт и технологии</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Климат-контроль</span>
+                        <span class="spec-value">2-зонный</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Круиз-контроль</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Мультимедиа</span>
+                        <span class="spec-value">7" сенсорный экран</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Apple CarPlay / Android Auto</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Обогрев сидений</span>
+                        <span class="spec-value">Передние сиденья</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Внедорожные характеристики</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Дорожный просвет</span>
+                        <span class="spec-value">235 мм</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система полного привода</span>
+                        <span class="spec-value">Super Select 4WD-II</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Блокировка дифференциала</span>
+                        <span class="spec-value">Задняя</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система помощи при спуске</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Буксировочная способность</span>
+                        <span class="spec-value">3 100 кг</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                    Mitsubishi L200 - это надежный и мощный пикап, созданный для самых сложных задач.
+                    Оснащен современным дизельным двигателем с турбонаддувом, автоматической коробкой передач
+                    и продвинутой системой полного привода. Просторная пятиместная кабина с комфортабельным салоном,
+                    современной мультимедийной системой и системами помощи водителю. Идеальный выбор для работы,
+                    путешествий по бездорожью и активного отдыха. Грузоподъемность более тонны и возможность буксировки
+                    до 3.1 тонны делают этот автомобиль универсальным помощником.
+                </p>
+            </div>
+        </div>
+
+        <div id="photos" class="tab-content">
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo1.jpg') }}" alt="Mitsubishi L200 вид спереди">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo2.jpg') }}" alt="Салон Mitsubishi L200">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo3.jpg') }}" alt="Mitsubishi L200 вид сзади">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo4.jpg') }}" alt="Кузов пикап">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo5.jpg') }}" alt="Приборная панель">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/mitsubishi_l200/photo6.jpg') }}" alt="Вид сбоку">
+                </div>
+            </div>
+            <p style="text-align: center; color: #94a3b8; font-style: italic;">
+                Для просмотра всех фото свяжитесь с менеджером
+            </p>
+        </div>
+
+        <div id="videos" class="tab-content">
+            <div class="videos-list">
+                <!-- Видео 1 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Mitsubishi L200</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo1"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/mitsubishi_l200/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/mitsubishi_l200/review.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader1">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка обзора...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Полный обзор пикапа с демонстрацией возможностей
+                    </p>
+                </div>
+
+                <!-- Видео 2 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🚙 Внедорожные испытания</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo2"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/mitsubishi_l200/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/mitsubishi_l200/offroad.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader2">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка видео...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Тестирование внедорожных возможностей на сложном рельефе
+                    </p>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🔧 Грузовые возможности</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo3"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/mitsubishi_l200/video_preview_3.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/mitsubishi_l200/cargo.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader3">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка обзора...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Демонстрация грузовых возможностей и практичности
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контейнер для модального окна -->
+    <div id="modalContainer"></div>
+
+    <script>
+        // Функция переключения табов
+        function openTab(tabName) {
+            // Скрыть все табы
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Убрать активный класс со всех кнопок
+            const tabButtons = document.getElementsByClassName('car-tab');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+
+            // Показать выбранный таб и активировать кнопку
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Функция для загрузки модального окна
+        async function openRentModal(carName) {
+            try {
+                const response = await fetch('/rent-modal');
+                const html = await response.text();
+                document.getElementById('modalContainer').innerHTML = html;
+                document.getElementById('selectedCar').textContent = carName;
+                document.getElementById('rentModal').style.display = 'flex';
+            } catch (error) {
+                console.error('Ошибка загрузки модального окна:', error);
+            }
+        }
+
+        // Закрытие модального окна при клике вне его
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('rentModal');
+            if (modal && event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Закрытие при нажатии ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('rentModal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+
+        // Обработка загрузки видео
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            videos.forEach((video, index) => {
+                const loader = document.getElementById(`videoLoader${index + 1}`);
+
+                if (loader) {
+                    video.addEventListener('loadstart', function() {
+                        loader.style.display = 'block';
+                    });
+
+                    video.addEventListener('canplay', function() {
+                        loader.style.display = 'none';
+                    });
+
+                    video.addEventListener('error', function() {
+                        loader.style.display = 'none';
+                        console.error(`Ошибка загрузки видео ${index + 1}`);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

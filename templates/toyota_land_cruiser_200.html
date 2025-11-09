@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда Toyota Land Cruiser 200 - CHI AUTO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="/" class="btn-back">
+            <i class='bx bx-arrow-back'></i>
+            Назад к каталогу
+        </a>
+
+        <!-- Основная информация -->
+        <div class="car-card">
+            <div class="car-image">
+                <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200.jpg') }}" alt="Toyota Land Cruiser 200">
+            </div>
+            <div class="car-info">
+                <h3>Toyota Land Cruiser 200</h3>
+                <p class="year">2024 г.</p>
+
+                <div class="price-section">
+                    <div class="price-row">
+                        <span>Цена на сутки</span>
+                        <span class="price">10 000 ₽</span>
+                    </div>
+                </div>
+
+                <div class="availability available">В наличии</div>
+            </div>
+
+            <div class="actions">
+                <button class="btn-rent" onclick="openRentModal('Toyota Land Cruiser 200')">Арендовать</button>
+            </div>
+        </div>
+
+        <!-- Табы для переключения разделов -->
+        <div class="car-detail-tabs">
+            <button class="car-tab active" onclick="openTab('info')">Информация</button>
+            <button class="car-tab" onclick="openTab('photos')">Фото</button>
+            <button class="car-tab" onclick="openTab('videos')">Видео</button>
+        </div>
+
+        <!-- Контент табов -->
+        <div id="info" class="tab-content active">
+            <div class="detail-specs">
+                <div class="spec-group">
+                    <h4>Основные характеристики</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Марка и модель</span>
+                        <span class="spec-value">Toyota Land Cruiser 200</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Год выпуска</span>
+                        <span class="spec-value">2024</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Поколение</span>
+                        <span class="spec-value">300 (2021—2025)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Состояние</span>
+                        <span class="spec-value">Идеальное</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Класс авто</span>
+                        <span class="spec-value">Комфорт</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Двигатель и трансмиссия</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Двигатель</span>
+                        <span class="spec-value">3.3L Turbo Дизель</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Мощность</span>
+                        <span class="spec-value">299 л.с.</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Коробка передач</span>
+                        <span class="spec-value">Автоматическая 10-ступенчатая</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Привод</span>
+                        <span class="spec-value">Полный (4WD)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Модификация</span>
+                        <span class="spec-value">3.3 D AT (299 л.с.)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Экстерьер и интерьер</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Тип кузова</span>
+                        <span class="spec-value">Внедорожник</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Количество дверей</span>
+                        <span class="spec-value">5</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Расположение руля</span>
+                        <span class="spec-value">Левый</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Количество мест</span>
+                        <span class="spec-value">7</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Цвет</span>
+                        <span class="spec-value">Белый/Черный</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Комфорт и технологии</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Кондиционер</span>
+                        <span class="spec-value">4-зонный климат-контроль</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Аудиосистема</span>
+                        <span class="spec-value">Премиум JBL</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Подогрев сидений</span>
+                        <span class="spec-value">Передние и задние сиденья</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Вентиляция сидений</span>
+                        <span class="spec-value">Передние сиденья</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Круиз-контроль</span>
+                        <span class="spec-value">Адаптивный с функцией Stop&Go</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Безопасность</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Подушки безопасности</span>
+                        <span class="spec-value">10</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система стабилизации</span>
+                        <span class="spec-value">VSC, TRC</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Камеры кругового обзора</span>
+                        <span class="spec-value">360°</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Парктроники</span>
+                        <span class="spec-value">Передние и задние</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система помощи при парковке</span>
+                        <span class="spec-value">Интеллектуальная</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Условия аренды</h4>
+                <div class="spec-group">
+                    <div class="spec-row">
+                        <span class="spec-label">Тип аренды</span>
+                        <span class="spec-value">Без водителя</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Минимальный возраст</span>
+                        <span class="spec-value">21 год</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Минимальный стаж</span>
+                        <span class="spec-value">2 года</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Депозит</span>
+                        <span class="spec-value">20 000 ₽</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Возврат депозита</span>
+                        <span class="spec-value">Через 13-14 дней</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Способы оплаты</span>
+                        <span class="spec-value">Наличные, Банковская карта, Расчетный счет</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Минимальный срок</span>
+                        <span class="spec-value">1 сутки</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Лимит пробега</span>
+                        <span class="spec-value">Нет</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Страховка</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Документы</span>
+                        <span class="spec-value">  _ Паспорт и водительское удостоверение РФ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Что включено в аренду</h4>
+                <div style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Аренда 24/7, включая выходные и праздники</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Бесплатная доставка в аэропорт и по городу (до 30.09)</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Детское кресло и зарядки для всех телефонов — бесплатно</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Авто всегда чистое, заправленное и в идеальном состоянии</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>ОСАГО без ограничений, полный пакет документов для физ. и юр. лиц</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Любая форма оплаты (нал, карта, р/с)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                    Аренда Toyota Land Cruiser 200 в Иркутске — это возможность получить в свое распоряжение один из самых
+                    надежных и комфортабельных внедорожников в мире. Автомобиль 2024 года выпуска в идеальном техническом
+                    состоянии, оснащенный всем необходимым для комфортных поездок по городу и за его пределами.
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    Мощный дизельный двигатель 3.3 литра обеспечивает превосходную динамику и экономичность, а полный привод
+                    и современные системы помощи водителю делают поездки безопасными в любых условиях. Просторный салон с
+                    кожаной отделкой, системами климат-контроля и премиальной аудиосистемой создают непревзойденный комфорт
+                    для всех пассажиров.
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    🔥 <strong>Акция!</strong>
+                </p>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Контакты и расположение</h4>
+                <div style="color: #cbd5e1; line-height: 1.6;">
+                    <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+                        <i class='bx bx-map' style="color: #3b82f6; font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <strong>Адрес:</strong><br>
+                            Иркутская обл., Иркутск, ул. Ширямова, 2/6<br>
+                            <span style="color: #94a3b8; font-size: 14px;">р-н Октябрьский</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 10px;">
+                        <i class='bx bx-time' style="color: #3b82f6; font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <strong>Режим работы:</strong><br>
+                            Ежедневно 9:00 - 21:00<br>
+                            <span style="color: #94a3b8; font-size: 14px;">Аренда 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="photos" class="tab-content">
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo1.jpg') }}" alt="Toyota Land Cruiser 200 вид спереди">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo2.jpg') }}" alt="Салон Toyota Land Cruiser">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo3.jpg') }}" alt="Toyota Land Cruiser вид сзади">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo4.jpg') }}" alt="Приборная панель">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo5.jpg') }}" alt="Вид сбоку">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/toyota_land_cruiser_200/photo6.jpg') }}" alt="Багажник">
+                </div>
+            </div>
+            <p style="text-align: center; color: #94a3b8; font-style: italic;">
+                Для просмотра всех фото свяжитесь с менеджером
+            </p>
+        </div>
+
+        <div id="videos" class="tab-content">
+            <div class="videos-list">
+                <!-- Видео 1 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Toyota Land Cruiser 200</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo1"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/toyota_land_cruiser_200/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/toyota_land_cruiser_200/review.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader1">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка обзора...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Полный обзор автомобиля с демонстрацией экстерьера и интерьера
+                    </p>
+                </div>
+
+                <!-- Видео 2 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🚙 Внедорожные возможности</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo2"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/toyota_land_cruiser_200/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/toyota_land_cruiser_200/offroad.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader2">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка видео...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Тестирование внедорожных характеристик и систем полного привода
+                    </p>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🔧 Технологии и комфорт</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo3"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/toyota_land_cruiser_200/video_preview_3.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/toyota_land_cruiser_200/technology.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader3">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка обзора...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Демонстрация систем комфорта и современных технологий
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контейнер для модального окна -->
+    <div id="modalContainer"></div>
+
+    <script>
+        // Функция переключения табов
+        function openTab(tabName) {
+            // Скрыть все табы
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Убрать активный класс со всех кнопок
+            const tabButtons = document.getElementsByClassName('car-tab');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+
+            // Показать выбранный таб и активировать кнопку
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Функция для загрузки модального окна
+        async function openRentModal(carName) {
+            try {
+                const response = await fetch('/rent-modal');
+                const html = await response.text();
+                document.getElementById('modalContainer').innerHTML = html;
+                document.getElementById('selectedCar').textContent = carName;
+                document.getElementById('rentModal').style.display = 'flex';
+            } catch (error) {
+                console.error('Ошибка загрузки модального окна:', error);
+            }
+        }
+
+        // Закрытие модального окна при клике вне его
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('rentModal');
+            if (modal && event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Закрытие при нажатии ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('rentModal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+
+        // Обработка загрузки видео
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            videos.forEach((video, index) => {
+                const loader = document.getElementById(`videoLoader${index + 1}`);
+
+                if (loader) {
+                    video.addEventListener('loadstart', function() {
+                        loader.style.display = 'block';
+                    });
+
+                    video.addEventListener('canplay', function() {
+                        loader.style.display = 'none';
+                    });
+
+                    video.addEventListener('error', function() {
+                        loader.style.display = 'none';
+                        console.error(`Ошибка загрузки видео ${index + 1}`);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
