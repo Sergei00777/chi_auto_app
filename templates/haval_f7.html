@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Lynk & Co 01 - CHI AUTO</title>
+    <title>Аренда Haval F7 - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,11 +18,11 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/lynk_co.jpg') }}" alt="Lynk & Co 01">
+                <img src="{{ url_for('static', filename='images/haval_f7.jpg') }}" alt="Haval F7">
             </div>
             <div class="car-info">
-                <h3>Lynk & Co 01</h3>
-                <p class="year">2020 г.</p>
+                <h3>Haval F7</h3>
+                <p class="year">2024 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Lynk & Co 01')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('Haval F7')">Арендовать</button>
             </div>
         </div>
 
@@ -57,15 +57,15 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Lynk & Co 01</span>
+                        <span class="spec-value">Haval F7</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2020</span>
+                        <span class="spec-value">2024</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Поколение</span>
-                        <span class="spec-value">I рестайлинг (2020—2025)</span>
+                        <span class="spec-value">II (2024—2025)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
@@ -77,7 +77,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Комплектация</span>
-                        <span class="spec-value">Base</span>
+                        <span class="spec-value">Elite</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Цвет</span>
+                        <span class="spec-value">Белый</span>
                     </div>
                 </div>
 
@@ -85,15 +89,15 @@
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
                         <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Гибрид 1.5L</span>
+                        <span class="spec-value">Бензин 1.5L Turbo</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">245 л.с.</span>
+                        <span class="spec-value">150 л.с.</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Автоматическая</span>
+                        <span class="spec-value">Роботизированная (DCT)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
@@ -101,7 +105,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5hyb AT (245 л.с.)</span>
+                        <span class="spec-value">1.5T DCT (150 л.с.)</span>
                     </div>
                 </div>
 
@@ -120,8 +124,8 @@
                         <span class="spec-value">Левый</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Черный</span>
+                        <span class="spec-label">Отделка салона</span>
+                        <span class="spec-value">Кожаная</span>
                     </div>
                 </div>
 
@@ -129,27 +133,19 @@
                     <h4>Комфорт и технологии</h4>
                     <div class="spec-row">
                         <span class="spec-label">Кондиционер</span>
-                        <span class="spec-value">Есть</span>
+                        <span class="spec-value">Климат-контроль</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Аудиосистема</span>
                         <span class="spec-value">Премиум</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Подогрев сидений</span>
-                        <span class="spec-value">Передние сиденья</span>
+                        <span class="spec-label">Мультимедиа</span>
+                        <span class="spec-value">Современная система</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Круиз-контроль</span>
-                        <span class="spec-value">Адаптивный</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Парктроник</span>
-                        <span class="spec-value">Передние и задние</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Камера заднего вида</span>
-                        <span class="spec-value">Есть</span>
+                        <span class="spec-label">Зарядки для телефонов</span>
+                        <span class="spec-value">Для всех типов разъемов</span>
                     </div>
                 </div>
             </div>
@@ -167,7 +163,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Минимальный стаж</span>
-                        <span class="spec-value">2 года</span>
+                        <span class="spec-value">3 года</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Депозит</span>
@@ -195,7 +191,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">ОСАГО</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
@@ -209,7 +205,7 @@
                 <div style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Аренда 24/7, включая выходные и праздники</span>
+                        <span>Выдача и приём авто в любое время суток, включая праздники и выходные (24/7)</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -217,11 +213,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Гибридная установка: можно ехать только на ДВС, только на электродвигателе или в комбинированном режиме</span>
-                    </div>
-                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
-                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Экономия топлива при сохранении динамики</span>
+                        <span>Свежие автомобили в идеальном техническом состоянии, заправленные и чистые</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -229,11 +221,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Зарядки для всех типов телефонов</span>
+                        <span>Полный пакет документов для физ. и юр. лиц</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Полный пакет документов для физ. и юр. лиц, ОСАГО без ограничений</span>
+                        <span>Зарядки для всех типов телефонов в каждом авто</span>
                     </div>
                 </div>
             </div>
@@ -241,18 +233,36 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    Аренда Lynk & Co 01 в Иркутске — премиум-кроссовер с гибридной установкой ⚡🚗
+                    Прокат автомобиля Haval F7 в Иркутске — комфорт бизнес-класса 24/7 🚗✨
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Эффективный, технологичный и динамичный Lynk & Co 01 — выбор тех, кто ценит комфорт, безопасность и стиль.
-                    Черный кузов, продуманная эргономика, просторный салон, современная мультимедиа и гибридная установка,
-                    позволяющая ездить экономично и экологично.
+                    Стильный и динамичный Haval F7 — идеальный кроссовер для деловых поездок, путешествий на Байкал
+                    или комфортных передвижений по Иркутску. Белый цвет, просторный салон, кожаная отделка и современная
+                    мультимедиа создадут максимум комфорта в любой поездке.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Тарифы на Lynk & Co 01:</strong><br>
+                    <strong>Тарифы на Haval F7:</strong><br>
                     • до 10 дней — 5 000 ₽/сутки<br>
                     • от 10 дней - 4 000 ₽/сутки
                 </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>О нас говорят клиенты:</strong> рейтинг 5.0★, реальные положительные отзывы,
+                    автопарк 2023–2024 года. Работаем официально, возможна оплата налом, картой или на р/счёт.
+                </p>
+            </div>
+
+            <div class="detail-specs">
+                <h4 style="color: #3b82f6; margin-bottom: 15px;">Частые вопросы</h4>
+                <div style="color: #cbd5e1; line-height: 1.6;">
+                    <div style="margin-bottom: 15px;">
+                        <strong>В: Могу ли я взять авто ночью или рано утром?</strong><br>
+                        <span>О: Да, мы работаем 24/7 без выходных и праздников.</span>
+                    </div>
+                    <div>
+                        <strong>В: Можно ли оформить аренду на юр. лицо?</strong><br>
+                        <span>О: Да, предоставляем полный пакет документов и работаем с организациями.</span>
+                    </div>
+                </div>
             </div>
 
             <div class="detail-specs">
@@ -281,22 +291,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo1.jpg') }}" alt="Lynk & Co 01 вид спереди">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo1.jpg') }}" alt="Haval F7 вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo2.jpg') }}" alt="Салон Lynk & Co 01">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo2.jpg') }}" alt="Салон Haval F7">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo3.jpg') }}" alt="Lynk & Co 01 вид сзади">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo3.jpg') }}" alt="Haval F7 вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo4.jpg') }}" alt="Приборная панель">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo5.jpg') }}" alt="Вид сбоку">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/lynk_co/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/haval_f7/photo6.jpg') }}" alt="Кожаный салон">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -308,15 +318,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Lynk & Co 01</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Haval F7 2024</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/lynk_co/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/lynk_co/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/haval_f7/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/haval_f7/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -325,21 +335,21 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Полный обзор автомобиля с демонстрацией экстерьера и интерьера
+                        Полный обзор нового Haval F7 2024 года с демонстрацией возможностей
                     </p>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">⚡ Гибридная технология</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв по городу</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/lynk_co/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/lynk_co/hybrid.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/haval_f7/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/haval_f7/city_drive.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -348,7 +358,7 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Демонстрация работы гибридной системы и режимов движения
+                        Тест-драйв Haval F7 в городских условиях Иркутска
                     </p>
                 </div>
             </div>
