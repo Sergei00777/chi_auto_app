@@ -8,9 +8,10 @@ def index():
     return render_template('index.html')
 
 # Страницы автомобилей
-@app.route('/car/toyota-corolla')
-def toyota_corolla():
-    return render_template('car_detail.html')
+
+@app.route('/car/geely-monjaro')
+def geely_monjaro():
+    return render_template('geely_monjaro.html')
 
 @app.route('/car/lynk-co')
 def lynk_co():
@@ -47,6 +48,26 @@ def geely_xingyue():
 @app.route('/car/geely-coolray')
 def geely_coolray():
     return render_template('geely_coolray.html')
+
+@app.route('/car/faw-bestune')
+def faw_bestune():
+    return render_template('faw_bestune.html')
+
+@app.route('/car/byd-qin-plus')
+def byd_qin_plus():
+    return render_template('byd_qin_plus.html')
+
+@app.route('/car/changan-uni-k')
+def changan_uni_k():
+    return render_template('changan_uni_k.html')
+
+@app.route('/car/toyota-corolla-cross')
+def toyota_corolla_cross():
+    return render_template('toyota_corolla_cross.html')
+
+@app.route('/car/toyota-land-cruiser-2013')
+def toyota_land_cruiser_2013():
+    return render_template('toyota_land_cruiser_2013.html')
 
 # Модальные окна и вспомогательные страницы
 @app.route('/rent-modal')

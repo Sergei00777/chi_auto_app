@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Geely Icon - CHI AUTO</title>
+    <title>Аренда BYD Qin Plus - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,20 +18,20 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/geely_icon.jpg') }}" alt="Geely Icon">
+                <img src="{{ url_for('static', filename='images/byd_qin_plus.jpg') }}" alt="BYD Qin Plus">
             </div>
             <div class="car-info">
-                <h3>Geely Icon</h3>
-                <p class="year">2021 г.</p>
+                <h3>BYD Qin Plus</h3>
+                <p class="year">2024 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price"> от 5 000 ₽</span>
+                        <span class="price">7 500 ₽</span>
                     </div>
                     <div class="price-row" style="color: #94a3b8; font-size: 14px;">
                         <span>от 10 дней</span>
-                        <span class="price">4 000 ₽</span>
+                        <span class="price">6 500 ₽</span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Geely Icon')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('BYD Qin Plus')">Арендовать</button>
             </div>
         </div>
 
@@ -57,15 +57,15 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Geely Icon</span>
+                        <span class="spec-value">BYD Qin Plus DM-i</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2020</span>
+                        <span class="spec-value">2024</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Поколение</span>
-                        <span class="spec-value">I (2019—2025)</span>
+                        <span class="spec-label">Тип силовой установки</span>
+                        <span class="spec-value">Подзаряжаемый гибрид (PHEV)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
@@ -73,67 +73,139 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Класс авто</span>
-                        <span class="spec-value">Комфорт</span>
+                        <span class="spec-value">Компактный седан</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Голубой</span>
+                        <span class="spec-label">Тип кузова</span>
+                        <span class="spec-value">Седан</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Бензин 1.5L</span>
+                        <span class="spec-label">Бензиновый двигатель</span>
+                        <span class="spec-value">1.5L (101 л.с.)</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Мощность</span>
-                        <span class="spec-value">177 л.с.</span>
+                        <span class="spec-label">Электродвигатель</span>
+                        <span class="spec-value">179 л.с.</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Роботизированная</span>
+                        <span class="spec-label">Суммарная мощность</span>
+                        <span class="spec-value">259 л.с.</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Крутящий момент</span>
+                        <span class="spec-value">316 Н·м</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Трансмиссия</span>
+                        <span class="spec-value">E-CVT (бесступенчатая)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
                         <span class="spec-value">Передний</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5 AMT (177 л.с.)</span>
+                        <span class="spec-label">Разгон 0-100 км/ч</span>
+                        <span class="spec-value">7.3 секунды</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
-                    <h4>Экстерьер и интерьер</h4>
+                    <h4>Аккумулятор и запас хода</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Тип кузова</span>
-                        <span class="spec-value">Внедорожник</span>
+                        <span class="spec-label">Тип батареи</span>
+                        <span class="spec-value">LiFePO4 Blade Battery</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Количество дверей</span>
-                        <span class="spec-value">5</span>
+                        <span class="spec-label">Емкость батареи</span>
+                        <span class="spec-value">18.32 кВт·ч</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Расположение руля</span>
-                        <span class="spec-value">Левый</span>
+                        <span class="spec-label">Запас хода на электротяге</span>
+                        <span class="spec-value">120 км (NEDC)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Расход топлива (гибрид)</span>
+                        <span class="spec-value">3.8 л/100 км</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Габариты</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Длина / Ширина / Высота</span>
+                        <span class="spec-value">4765 / 1837 / 1495 мм</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Колесная база</span>
+                        <span class="spec-value">2718 мм</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Дорожный просвет</span>
+                        <span class="spec-value">150 мм</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Объем багажника</span>
+                        <span class="spec-value">500 литров</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
                     <h4>Комфорт и технологии</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Кондиционер</span>
+                        <span class="spec-label">Центральный экран</span>
+                        <span class="spec-value">Вращающийся 12.8"</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Цифровая приборная панель</span>
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Аудиосистема</span>
+                        <span class="spec-label">Климат-контроль</span>
+                        <span class="spec-value">Двухзонный</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Панорамный люк</span>
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Зарядки для телефонов</span>
-                        <span class="spec-value">Для всех разъемов</span>
+                        <span class="spec-label">Кожаный салон</span>
+                        <span class="spec-value">Искусственная кожа</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Apple CarPlay / Android Auto</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Безопасность</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Адаптивный круиз-контроль</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Помощь при движении по полосе</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система экстренного торможения</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Камера заднего вида</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Датчики парковки</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Контроль давления в шинах</span>
+                        <span class="spec-value">Есть</span>
                     </div>
                 </div>
             </div>
@@ -159,11 +231,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Депозит</span>
-                        <span class="spec-value">10 000 ₽</span>
+                        <span class="spec-value">15 000 ₽</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Возврат депозита</span>
-                        <span class="spec-value">Через 20 дней</span>
+                        <span class="spec-value">Через 14 дней</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Способы оплаты</span>
@@ -179,11 +251,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Доплата за км сверх лимита</span>
-                        <span class="spec-value">15 ₽/км</span>
+                        <span class="spec-value">20 ₽/км</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">КАСКО, ОСАГО без ограничений</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
@@ -201,11 +273,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Возможность добавить водителя</span>
+                        <span>Бесплатная доставка в аэропорт и по городу</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Бесплатная доставка в аэропорт и по городу</span>
+                        <span>Полная зарядка батареи перед выдачей</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -221,7 +293,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Полный пакет документов для физ. и юр. лиц, КАСКО и ОСАГО без ограничений</span>
+                        <span>Полный пакет документов для физ. и юр. лиц, ОСАГО без ограничений</span>
                     </div>
                 </div>
             </div>
@@ -229,23 +301,43 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    ⭐️ Аренда с нами просто, быстро и легко!
+                    ⭐️ Аренда BYD Qin Plus в Иркутске — технологичный гибрид с феноменальной экономичностью!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Современный и стильный Geely Icon в голубом цвете — идеальный выбор для городских поездок и путешествий.
-                    Яркий дизайн, комфортный салон и экономичный двигатель делают эту модель популярной среди наших клиентов.
+                    BYD Qin Plus DM-i — это не просто гибрид, а технологический прорыв, который сочетает в себе
+                    динамику электромобиля с практичностью традиционного автомобиля. Идеальный выбор для тех,
+                    кто хочет экономить на топливе без компромиссов в комфорте и производительности.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды голубого Geely Icon:</strong><br>
-                    • До 10 дней - 5 000₽/сутки<br>
-                    • Больше 10 дней - 4 000₽/сутки
+                    <strong>Стоимость аренды BYD Qin Plus:</strong><br>
+                    • До 10 дней - 7 500₽/сутки<br>
+                    • Больше 10 дней - 6 500₽/сутки
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Преимущества:</strong><br>
-                    • Аренда автомобиля от суток до бесконечности<br>
-                    • Выбор автомобиля по Вашему запросу<br>
-                    • Эконом/комфорт/премиум классы<br>
-                    • Седан/кроссовер/джип/минивэн
+                    <strong>Ключевые преимущества:</strong><br>
+                    • Феноменальная экономичность: расход всего 3.8 л/100 км<br>
+                    • Запас хода на электротяге 120 км — идеально для ежедневных поездок<br>
+                    • Мощная гибридная установка: 259 л.с. суммарной мощности<br>
+                    • Быстрый разгон: 7.3 секунды до 100 км/ч<br>
+                    • Передовая Blade Battery — безопасная и долговечная<br>
+                    • Вращающийся сенсорный экран 12.8"<br>
+                    • Плавность хода как у электромобиля
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>Режимы движения:</strong><br>
+                    • EV: Только на электротяге (до 120 км)<br>
+                    • Series: Двигатель заряжает батарею<br>
+                    • Parallel: Совместная работа для максимальной мощности<br>
+                    • Engine Direct Drive: Прямая передача на колеса для эффективности на трассе
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>Технологии и безопасность:</strong><br>
+                    • Адаптивный круиз-контроль<br>
+                    • Система помощи в движении по полосе<br>
+                    • Автоматическое экстренное торможение<br>
+                    • Камера кругового обзора 360°<br>
+                    • Датчики парковки спереди и сзади<br>
+                    • Контроль давления в шинах
                 </p>
             </div>
 
@@ -275,22 +367,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo1.jpg') }}" alt="Geely Icon вид спереди">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo1.jpg') }}" alt="BYD Qin Plus вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo2.jpg') }}" alt="Салон Geely Icon">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo2.jpg') }}" alt="Салон BYD Qin Plus">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo3.jpg') }}" alt="Geely Icon вид сзади">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo3.jpg') }}" alt="BYD Qin Plus вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo4.jpg') }}" alt="Вращающийся экран">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo5.jpg') }}" alt="Приборная панель">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/byd_qin_plus/photo6.jpg') }}" alt="Багажник">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -302,15 +394,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Icon</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор BYD Qin Plus DM-i</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/byd_qin_plus/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/byd_qin_plus/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -319,21 +411,21 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Полный обзор автомобиля с демонстрацией экстерьера и интерьера
+                        Полный обзор гибридной технологии DM-i и возможностей автомобиля
                     </p>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв в городе</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв и экономичность</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/city_drive.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/byd_qin_plus/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/byd_qin_plus/efficiency.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -342,7 +434,7 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Тест-драйв Geely Icon в городских условиях
+                        Демонстрация реального расхода топлива и работы гибридной системы
                     </p>
                 </div>
             </div>

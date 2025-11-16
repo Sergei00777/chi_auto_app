@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Geely Icon - CHI AUTO</title>
+    <title>Аренда Geely Coolray - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,19 +18,15 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/geely_icon.jpg') }}" alt="Geely Icon">
+                <img src="{{ url_for('static', filename='images/geely_coolray.jpg') }}" alt="Geely Coolray">
             </div>
             <div class="car-info">
-                <h3>Geely Icon</h3>
-                <p class="year">2021 г.</p>
+                <h3>Geely Coolray</h3>
+                <p class="year">2020 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price"> от 5 000 ₽</span>
-                    </div>
-                    <div class="price-row" style="color: #94a3b8; font-size: 14px;">
-                        <span>от 10 дней</span>
                         <span class="price">4 000 ₽</span>
                     </div>
                 </div>
@@ -39,7 +35,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Geely Icon')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('Geely Coolray')">Арендовать</button>
             </div>
         </div>
 
@@ -57,7 +53,7 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Geely Icon</span>
+                        <span class="spec-value">Geely Coolray</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
@@ -76,8 +72,8 @@
                         <span class="spec-value">Комфорт</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Голубой</span>
+                        <span class="spec-label">Комплектация</span>
+                        <span class="spec-value">Luxury</span>
                     </div>
                 </div>
 
@@ -89,11 +85,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">177 л.с.</span>
+                        <span class="spec-value">150 л.с.</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Роботизированная</span>
+                        <span class="spec-value">Роботизированная (AMT)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
@@ -101,7 +97,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5 AMT (177 л.с.)</span>
+                        <span class="spec-value">1.5 AMT (150 л.с.)</span>
                     </div>
                 </div>
 
@@ -129,6 +125,22 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Аудиосистема</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Сиденья с подогревом</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Круиз-контроль</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Парктроник</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Камера заднего вида</span>
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
@@ -167,7 +179,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Способы оплаты</span>
-                        <span class="spec-value">Наличные, Банковская карта, Расчетный счет</span>
+                        <span class="spec-value">Наличные</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Минимальный срок</span>
@@ -175,15 +187,15 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Лимит пробега</span>
-                        <span class="spec-value">250 км/сутки</span>
+                        <span class="spec-value">200 км/сутки</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Доплата за км сверх лимита</span>
-                        <span class="spec-value">15 ₽/км</span>
+                        <span class="spec-value">30 ₽/км</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">КАСКО, ОСАГО без ограничений</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
@@ -201,11 +213,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Возможность добавить водителя</span>
+                        <span>Бесплатная доставка в аэропорт и по городу</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Бесплатная доставка в аэропорт и по городу</span>
+                        <span>Возможность добавить водителя</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -221,7 +233,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Полный пакет документов для физ. и юр. лиц, КАСКО и ОСАГО без ограничений</span>
+                        <span>Полный пакет документов для физ. и юр. лиц, ОСАГО без ограничений</span>
                     </div>
                 </div>
             </div>
@@ -229,23 +241,32 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    ⭐️ Аренда с нами просто, быстро и легко!
+                    ⭐️ Аренда Geely Coolray в Иркутске — стильный компактный кроссовер с богатой комплектацией!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Современный и стильный Geely Icon в голубом цвете — идеальный выбор для городских поездок и путешествий.
-                    Яркий дизайн, комфортный салон и экономичный двигатель делают эту модель популярной среди наших клиентов.
+                    Geely Coolray — это современный городской кроссовер в комплектации Luxury, который предлагает
+                    прекрасное сочетание стиля, комфорта и технологий. Богатое оснащение и экономичный двигатель
+                    делают его идеальным выбором для повседневных поездок.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды голубого Geely Icon:</strong><br>
-                    • До 10 дней - 5 000₽/сутки<br>
-                    • Больше 10 дней - 4 000₽/сутки
+                    <strong>Стоимость аренды Geely Coolray:</strong><br>
+                    • 4 000₽/сутки
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Преимущества:</strong><br>
-                    • Аренда автомобиля от суток до бесконечности<br>
-                    • Выбор автомобиля по Вашему запросу<br>
-                    • Эконом/комфорт/премиум классы<br>
-                    • Седан/кроссовер/джип/минивэн
+                    <strong>Преимущества модели:</strong><br>
+                    • Богатая комплектация Luxury<br>
+                    • Подогрев сидений для комфорта в холодное время<br>
+                    • Круиз-контроль для удобства на трассе<br>
+                    • Парктроник и камера заднего вида для легкой парковки<br>
+                    • Экономичный и надежный двигатель 1.5L<br>
+                    • Стильный и современный дизайн
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>Условия аренды:</strong><br>
+                    • Водительское удостоверение и паспорт РФ<br>
+                    • Возраст от 21 года, стаж от 2 лет<br>
+                    • Лимит пробега 200 км/сутки (сверх лимита 30₽/км)<br>
+                    • Залог 10 000₽ (возврат через 13-14 дней)
                 </p>
             </div>
 
@@ -275,22 +296,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo1.jpg') }}" alt="Geely Icon вид спереди">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo1.jpg') }}" alt="Geely Coolray вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo2.jpg') }}" alt="Салон Geely Icon">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo2.jpg') }}" alt="Салон Geely Coolray">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo3.jpg') }}" alt="Geely Icon вид сзади">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo3.jpg') }}" alt="Geely Coolray вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo4.jpg') }}" alt="Приборная панель">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo5.jpg') }}" alt="Вид сбоку">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/geely_coolray/photo6.jpg') }}" alt="Мультимедиа система">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -302,15 +323,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Icon</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Coolray</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_coolray/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_coolray/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -319,21 +340,21 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Полный обзор автомобиля с демонстрацией экстерьера и интерьера
+                        Полный обзор автомобиля с демонстрацией всех функций комплектации Luxury
                     </p>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв в городе</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв в городских условиях</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/city_drive.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_coolray/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_coolray/city_drive.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -342,7 +363,7 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Тест-драйв Geely Icon в городских условиях
+                        Тест-драйв Geely Coolray с демонстрацией систем помощи при парковке
                     </p>
                 </div>
             </div>

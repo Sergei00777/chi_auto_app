@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Geely Icon - CHI AUTO</title>
+    <title>Geely Monjaro - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,20 +18,16 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/geely_icon.jpg') }}" alt="Geely Icon">
+                <img src="{{ url_for('static', filename='images/geely_monjaro.jpg') }}" alt="Geely Monjaro">
             </div>
             <div class="car-info">
-                <h3>Geely Icon</h3>
-                <p class="year">2021 г.</p>
+                <h3>Geely Monjaro</h3>
+                <p class="year">2022 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price"> от 5 000 ₽</span>
-                    </div>
-                    <div class="price-row" style="color: #94a3b8; font-size: 14px;">
-                        <span>от 10 дней</span>
-                        <span class="price">4 000 ₽</span>
+                        <span class="price">7 000 ₽</span>
                     </div>
                 </div>
 
@@ -39,9 +35,13 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Geely Icon')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('Geely Monjaro')">Арендовать</button>
             </div>
         </div>
+
+
+
+
 
         <!-- Табы для переключения разделов -->
         <div class="car-detail-tabs">
@@ -57,27 +57,23 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Geely Icon</span>
+                        <span class="spec-value">Geely Monjaro</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2020</span>
+                        <span class="spec-value">2022</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Поколение</span>
-                        <span class="spec-value">I (2019—2025)</span>
+                        <span class="spec-label">Пробег</span>
+                        <span class="spec-value">25 000 км</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
-                        <span class="spec-value">Идеальное</span>
+                        <span class="spec-value">Отличное</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Класс авто</span>
                         <span class="spec-value">Комфорт</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Голубой</span>
                     </div>
                 </div>
 
@@ -85,23 +81,19 @@
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
                         <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Бензин 1.5L</span>
+                        <span class="spec-value">2.0L Бензин</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">177 л.с.</span>
+                        <span class="spec-value">238 л.с.</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Роботизированная</span>
+                        <span class="spec-value">АКПП</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
                         <span class="spec-value">Передний</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5 AMT (177 л.с.)</span>
                     </div>
                 </div>
 
@@ -112,17 +104,29 @@
                         <span class="spec-value">Внедорожник</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Количество дверей</span>
-                        <span class="spec-value">5</span>
+                        <span class="spec-label">Цвет</span>
+                        <span class="spec-value">Синий</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Расположение руля</span>
                         <span class="spec-value">Левый</span>
                     </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Количество мест</span>
+                        <span class="spec-value">5</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Двери</span>
+                        <span class="spec-value">5</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Комплектация</span>
+                        <span class="spec-value">Cloud</span>
+                    </div>
                 </div>
 
                 <div class="spec-group">
-                    <h4>Комфорт и технологии</h4>
+                    <h4>Дополнительно</h4>
                     <div class="spec-row">
                         <span class="spec-label">Кондиционер</span>
                         <span class="spec-value">Есть</span>
@@ -132,8 +136,48 @@
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Зарядки для телефонов</span>
-                        <span class="spec-value">Для всех разъемов</span>
+                        <span class="spec-label">Сиденья с подогревом</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Парктроник</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Камера заднего вида</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Условия аренды</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Тип аренды</span>
+                        <span class="spec-value">Без водителя</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Минимальный возраст</span>
+                        <span class="spec-value">21 год</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Минимальный стаж</span>
+                        <span class="spec-value">2 года</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Депозит</span>
+                        <span class="spec-value">10 000 ₽</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Возврат депозита</span>
+                        <span class="spec-value">Через 14 дней</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Страховка</span>
+                        <span class="spec-value">ОСАГО</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Лимит пробега</span>
+                        <span class="spec-value">250 км/сутки</span>
                     </div>
                 </div>
             </div>
@@ -205,7 +249,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Бесплатная доставка в аэропорт и по городу</span>
+                        <span>Доставка автомобиля в удобное для Вас место (в аэропорт бесплатно☺️)</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -232,13 +276,12 @@
                     ⭐️ Аренда с нами просто, быстро и легко!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Современный и стильный Geely Icon в голубом цвете — идеальный выбор для городских поездок и путешествий.
-                    Яркий дизайн, комфортный салон и экономичный двигатель делают эту модель популярной среди наших клиентов.
+                    • Легендарный Байкал: Берите семью и отправляйтесь навстречу кристальной воде и живописным берегам! Моnjаrо — идеальный выбор для путешествий по Прибайкалью. • Дикие реки Амура: Забудьте о дорогах! Моnjаrо уверенно преодолеет любые препятствия на пути к захватывающим пейзажам.• Пикник на природе: Вместительный багажник Моnjаrо с легкостью вместит все необходимое для незабываемого отдыха на свежем воздухе.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды голубого Geely Icon:</strong><br>
-                    • До 10 дней - 5 000₽/сутки<br>
-                    • Больше 10 дней - 4 000₽/сутки
+                    <strong>Стоимость аренды голубого Gеely Моnjаrо:</strong><br>
+                    • До 10 дней - 7 000₽/сутки<br>
+                    • Больше 10 дней - 6 000₽/сутки
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
                     <strong>Преимущества:</strong><br>
@@ -275,22 +318,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo1.jpg') }}" alt="Geely Icon вид спереди">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/1.jpg') }}" alt="Geely Monjaro вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo2.jpg') }}" alt="Салон Geely Icon">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/2.jpg') }}" alt="Салон Geely Monjaro">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo3.jpg') }}" alt="Geely Icon вид сзади">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/3.jpg') }}" alt="Geely Monjaro вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/4.jpg') }}" alt="Приборная панель Geely Monjaro">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/5.jpg') }}" alt="Geely Monjaro вид сбоку">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/geely_monjaro/6.jpg') }}" alt="Багажник Geely Monjaro">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -302,15 +345,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Icon</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Monjaro</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_monjaro/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -325,24 +368,47 @@
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв в городе</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв по городу</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/city_drive.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_monjaro/test_drive.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
                             <i class='bx bx-loader-alt bx-spin'></i>
-                            <p>Загрузка видео...</p>
+                            <p>Загрузка тест-драйва...</p>
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Тест-драйв Geely Icon в городских условиях
+                        Тестовый заезд по городским дорогам Иркутска
+                    </p>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🔧 Обзор салона и функций</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo3"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/geely_video_preview_3.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_monjaro/interior.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader3">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка обзора салона...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Детальный обзор приборной панели и функций управления
                     </p>
                 </div>
             </div>
@@ -353,6 +419,21 @@
     <div id="modalContainer"></div>
 
     <script>
+        // Функции для загрузки видео
+        function showVideoLoader(loaderId) {
+            const loader = document.getElementById(loaderId);
+            if (loader) {
+                loader.style.display = 'block';
+            }
+        }
+
+        function hideVideoLoader(loaderId) {
+            const loader = document.getElementById(loaderId);
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        }
+
         // Функция переключения табов
         function openTab(tabName) {
             // Скрыть все табы
@@ -393,35 +474,22 @@
             }
         });
 
-        // Закрытие при нажатии ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modal = document.getElementById('rentModal');
-                if (modal) {
-                    modal.style.display = 'none';
-                }
-            }
-        });
-
-        // Обработка загрузки видео
+        // Предзагрузка видео при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('video');
-            videos.forEach((video, index) => {
-                const loader = document.getElementById(`videoLoader${index + 1}`);
+            // Устанавливаем обработчики для всех видео
+            const videos = [
+                { id: 'carVideo1', loader: 'videoLoader1' },
+                { id: 'carVideo2', loader: 'videoLoader2' },
+                { id: 'carVideo3', loader: 'videoLoader3' }
+            ];
 
-                if (loader) {
-                    video.addEventListener('loadstart', function() {
-                        loader.style.display = 'block';
-                    });
-
-                    video.addEventListener('canplay', function() {
-                        loader.style.display = 'none';
-                    });
-
-                    video.addEventListener('error', function() {
-                        loader.style.display = 'none';
-                        console.error(`Ошибка загрузки видео ${index + 1}`);
-                    });
+            videos.forEach(videoInfo => {
+                const video = document.getElementById(videoInfo.id);
+                if (video) {
+                    video.addEventListener('loadstart', () => showVideoLoader(videoInfo.loader));
+                    video.addEventListener('canplay', () => hideVideoLoader(videoInfo.loader));
+                    video.addEventListener('error', () => hideVideoLoader(videoInfo.loader));
+                    video.preload = 'metadata';
                 }
             });
         });

@@ -26,71 +26,71 @@
 
         <!-- Карточки автомобилей -->
         <div class="cars-grid">
-            <!-- Toyota Corolla Fielder -->
-            <div class="car-card">
-                <div class="car-image">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla.jpg') }}" alt="Toyota Corolla Fielder">
+            <!-- Geely Monjaro -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/geely_monjaro.jpg') }}" alt="Geely Monjaro">
+    </div>
+    <div class="car-info">
+        <h3>Geely Monjaro</h3>
+        <p class="year">2022 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
                 </div>
-                <div class="car-info">
-                    <h3>Toyota Corolla Fielder</h3>
-                    <p class="year">2006 г.</p>
-
-                    <div class="car-details-grid">
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-car'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Марка</span>
-                                <span class="detail-value">Toyota Corolla Fielder</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-calendar'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Год</span>
-                                <span class="detail-value">2006 г.</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-chip'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Двигатель</span>
-                                <span class="detail-value">1.5/110 лс/Бензин</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-map'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Город</span>
-                                <span class="detail-value">Иркутск</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="availability available">В наличии</div>
-                </div>
-
-                <div class="rental-info">
-                    <div class="price-section">
-                        <div class="price-row">
-                            <span>Цена на сутки</span>
-                            <span class="price">2 500 ₽</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="actions">
-                    <button class="btn-details" onclick="window.location.href='/car/toyota-corolla'">Подробнее</button>
-                    <button class="btn-rent" onclick="openRentModal('Toyota Corolla Fielder')">Арендовать</button>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">Geely Monjaro</span>
                 </div>
             </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2022 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">2.0/238 лс/Бензин</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">7 000 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/geely-monjaro'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('Geely Monjaro')">Арендовать</button>
+    </div>
+</div>
 
             <!-- Lynk & Co -->
             <div class="car-card">
@@ -315,7 +315,7 @@
                             </div>
                             <div class="detail-content">
                                 <span class="detail-label">Год</span>
-                                <span class="detail-value">2021 г.</span>
+                                <span class="detail-value">2020 г.</span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -345,7 +345,7 @@
                     <div class="price-section">
                         <div class="price-row">
                             <span>Цена на сутки</span>
-                            <span class="price">5 000 ₽</span>
+                            <span class="price"> от 5 000 ₽</span>
                         </div>
                     </div>
                 </div>
@@ -686,72 +686,357 @@
                 </div>
             </div>
 
-            <!-- Ford Kuga -->
-            <div class="car-card">
-                <div class="car-image">
-                    <img src="{{ url_for('static', filename='images/ford_kuga.jpg') }}" alt="Ford Kuga">
+            <!-- FAW Bestune B70 -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/faw_bestune.jpg') }}" alt="FAW Bestune B70">
+    </div>
+    <div class="car-info">
+        <h3>FAW Bestune B70</h3>
+        <p class="year">2024 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
                 </div>
-                <div class="car-info">
-                    <h3>Ford Kuga</h3>
-                    <p class="year">2013 г.</p>
-
-                    <div class="car-details-grid">
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-car'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Марка</span>
-                                <span class="detail-value">Ford Kuga</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-calendar'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Год</span>
-                                <span class="detail-value">2013 г.</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-chip'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Двигатель</span>
-                                <span class="detail-value">1.6/150 лс/Бензин</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="icon-circle">
-                                <i class='bx bx-map'></i>
-                            </div>
-                            <div class="detail-content">
-                                <span class="detail-label">Город</span>
-                                <span class="detail-value">Иркутск</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="availability not-available">Не доступен</div>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">FAW Bestune B70</span>
                 </div>
-
-                <div class="rental-info">
-                    <div class="price-section">
-                        <div class="price-row">
-                            <span>Цена на сутки</span>
-                            <span class="price">3 800 ₽</span>
-                        </div>
-                    </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
                 </div>
-
-                <div class="actions">
-                    <button class="btn-details" onclick="window.location.href='/car/ford-kuga'">Подробнее</button>
-                    <button class="btn-rent" onclick="openRentModal('Ford Kuga')" disabled>Арендовать</button>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2024 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">1.5 Turbo/165 лс/Бензин</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
                 </div>
             </div>
         </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">6 500 ₽</span>
+            </div>
+            <div class="price-row" style="color: #94a3b8; font-size: 14px;">
+                <span>от 10 дней</span>
+                <span class="price">5 500 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/faw-bestune'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('FAW Bestune B70')">Арендовать</button>
+    </div>
+</div>
+
+            <!-- BYD Qin Plus -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/byd_qin_plus.jpg') }}" alt="BYD Qin Plus">
+    </div>
+    <div class="car-info">
+        <h3>BYD Qin Plus</h3>
+        <p class="year">2024 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">BYD Qin Plus</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2024 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">Гибрид/259 лс/PHEV</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">7 500 ₽</span>
+            </div>
+            <div class="price-row" style="color: #94a3b8; font-size: 14px;">
+                <span>от 10 дней</span>
+                <span class="price">6 500 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/byd-qin-plus'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('BYD Qin Plus')">Арендовать</button>
+    </div>
+</div>
+
+            <!-- Changan Uni-K -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/changan_uni_k.jpg') }}" alt="Changan Uni-K">
+    </div>
+    <div class="car-info">
+        <h3>Changan Uni-K</h3>
+        <p class="year">2024 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">Changan Uni-K</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2024 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">2.0 Turbo/233 лс/Бензин</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">9 500 ₽</span>
+            </div>
+            <div class="price-row" style="color: #94a3b8; font-size: 14px;">
+                <span>от 10 дней</span>
+                <span class="price">8 500 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/changan-uni-k'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('Changan Uni-K')">Арендовать</button>
+    </div>
+</div>
+
+            <!-- Toyota Corolla Cross -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/toyota_corolla_cross.jpg') }}" alt="Toyota Corolla Cross">
+    </div>
+    <div class="car-info">
+        <h3>Toyota Corolla Cross</h3>
+        <p class="year">2024 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">Toyota Corolla Cross</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2024 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">2.0L/171 лс/Бензин</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">8 500 ₽</span>
+            </div>
+            <div class="price-row" style="color: #94a3b8; font-size: 14px;">
+                <span>от 10 дней</span>
+                <span class="price">7 500 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/toyota-corolla-cross'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('Toyota Corolla Cross')">Арендовать</button>
+    </div>
+</div>
+
+
+            <!-- Toyota Land Cruiser 2013 -->
+<div class="car-card">
+    <div class="car-image">
+        <img src="{{ url_for('static', filename='images/toyota_land_cruiser_2013.jpg') }}" alt="Toyota Land Cruiser 2013">
+    </div>
+    <div class="car-info">
+        <h3>Toyota Land Cruiser 2013</h3>
+        <p class="year">2013 г.</p>
+
+        <div class="car-details-grid">
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-car'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Марка</span>
+                    <span class="detail-value">Toyota Land Cruiser</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Год</span>
+                    <span class="detail-value">2013 г.</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Двигатель</span>
+                    <span class="detail-value">4.5L/235 лс/Дизель</span>
+                </div>
+            </div>
+            <div class="detail-item">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <div class="detail-content">
+                    <span class="detail-label">Город</span>
+                    <span class="detail-value">Иркутск</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability available">В наличии</div>
+    </div>
+
+    <div class="rental-info">
+        <div class="price-section">
+            <div class="price-row">
+                <span>Цена на сутки</span>
+                <span class="price">12 000 ₽</span>
+            </div>
+            <div class="price-row" style="color: #94a3b8; font-size: 14px;">
+                <span>от 10 дней</span>
+                <span class="price">10 500 ₽</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-details" onclick="window.location.href='/car/toyota-land-cruiser-2013'">Подробнее</button>
+        <button class="btn-rent" onclick="openRentModal('Toyota Land Cruiser 2013')">Арендовать</button>
+    </div>
+</div>
+
 
         <!-- Нижняя панель навигации -->
         <nav class="bottom-nav">

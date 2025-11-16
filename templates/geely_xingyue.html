@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Geely Icon - CHI AUTO</title>
+    <title>Аренда Geely Xingyue L - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,20 +18,16 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/geely_icon.jpg') }}" alt="Geely Icon">
+                <img src="{{ url_for('static', filename='images/geely_xingyue.jpg') }}" alt="Geely Xingyue L">
             </div>
             <div class="car-info">
-                <h3>Geely Icon</h3>
+                <h3>Geely Xingyue L</h3>
                 <p class="year">2021 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price"> от 5 000 ₽</span>
-                    </div>
-                    <div class="price-row" style="color: #94a3b8; font-size: 14px;">
-                        <span>от 10 дней</span>
-                        <span class="price">4 000 ₽</span>
+                        <span class="price">4 500 ₽</span>
                     </div>
                 </div>
 
@@ -39,7 +35,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Geely Icon')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('Geely Xingyue L')">Арендовать</button>
             </div>
         </div>
 
@@ -57,15 +53,15 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Geely Icon</span>
+                        <span class="spec-value">Geely Xingyue L</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2020</span>
+                        <span class="spec-value">2021</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Поколение</span>
-                        <span class="spec-value">I (2019—2025)</span>
+                        <span class="spec-value">I (2021—2025)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
@@ -75,25 +71,21 @@
                         <span class="spec-label">Класс авто</span>
                         <span class="spec-value">Комфорт</span>
                     </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Голубой</span>
-                    </div>
                 </div>
 
                 <div class="spec-group">
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
                         <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Бензин 1.5L</span>
+                        <span class="spec-value">Бензин 2.0L Turbo</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">177 л.с.</span>
+                        <span class="spec-value">218 л.с.</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Роботизированная</span>
+                        <span class="spec-value">Роботизированная (DCT)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
@@ -101,7 +93,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5 AMT (177 л.с.)</span>
+                        <span class="spec-value">2.0T DCT (218 л.с.)</span>
                     </div>
                 </div>
 
@@ -135,6 +127,10 @@
                         <span class="spec-label">Зарядки для телефонов</span>
                         <span class="spec-value">Для всех разъемов</span>
                     </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Мультимедийная система</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
                 </div>
             </div>
 
@@ -163,7 +159,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Возврат депозита</span>
-                        <span class="spec-value">Через 20 дней</span>
+                        <span class="spec-value">Через 14 дней</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Способы оплаты</span>
@@ -183,7 +179,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">КАСКО, ОСАГО без ограничений</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
@@ -201,11 +197,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Возможность добавить водителя</span>
+                        <span>Бесплатная доставка в аэропорт и по городу</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Бесплатная доставка в аэропорт и по городу</span>
+                        <span>Возможность добавить водителя</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -221,7 +217,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Полный пакет документов для физ. и юр. лиц, КАСКО и ОСАГО без ограничений</span>
+                        <span>Полный пакет документов для физ. и юр. лиц, ОСАГО без ограничений</span>
                     </div>
                 </div>
             </div>
@@ -229,23 +225,32 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    ⭐️ Аренда с нами просто, быстро и легко!
+                    ⭐️ Аренда Geely Xingyue в Иркутске — современный кроссовер с мощным двигателем!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Современный и стильный Geely Icon в голубом цвете — идеальный выбор для городских поездок и путешествий.
-                    Яркий дизайн, комфортный салон и экономичный двигатель делают эту модель популярной среди наших клиентов.
+                    Geely Xingyue L сочетает в себе стильный дизайн, просторный салон и мощный турбированный двигатель.
+                    Идеальный выбор для городских поездок и путешествий по области.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды голубого Geely Icon:</strong><br>
-                    • До 10 дней - 5 000₽/сутки<br>
-                    • Больше 10 дней - 4 000₽/сутки
+                    <strong>Стоимость аренды Geely Xingyue L:</strong><br>
+                    • 4 500₽/сутки
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
                     <strong>Преимущества:</strong><br>
-                    • Аренда автомобиля от суток до бесконечности<br>
-                    • Выбор автомобиля по Вашему запросу<br>
-                    • Эконом/комфорт/премиум классы<br>
-                    • Седан/кроссовер/джип/минивэн
+                    • Мощный турбированный двигатель 2.0L<br>
+                    • Просторный салон для комфортных поездок<br>
+                    • Современная роботизированная коробка передач<br>
+                    • Экономичный расход топлива<br>
+                    • Стильный современный дизайн
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>Что вы получаете:</strong><br>
+                    • Аренда 24/7, включая выходные и праздники<br>
+                    • Бесплатная доставка в аэропорт и по городу<br>
+                    • Детское кресло и зарядки для всех телефонов — бесплатно<br>
+                    • Авто всегда чистое, заправленное и в идеальном состоянии<br>
+                    • ОСАГО без ограничений, полный пакет документов<br>
+                    • Любая форма оплаты (нал, карта, р/с)
                 </p>
             </div>
 
@@ -275,22 +280,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo1.jpg') }}" alt="Geely Icon вид спереди">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo1.jpg') }}" alt="Geely Xingyue L вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo2.jpg') }}" alt="Салон Geely Icon">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo2.jpg') }}" alt="Салон Geely Xingyue L">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo3.jpg') }}" alt="Geely Icon вид сзади">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo3.jpg') }}" alt="Geely Xingyue L вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo4.jpg') }}" alt="Приборная панель">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo5.jpg') }}" alt="Вид сбоку">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/geely_xingyue/photo6.jpg') }}" alt="Мультимедиа система">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -302,15 +307,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Icon</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Xingyue L</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_xingyue/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_xingyue/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -332,8 +337,8 @@
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/city_drive.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/geely_xingyue/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/geely_xingyue/city_drive.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -342,7 +347,7 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Тест-драйв Geely Icon в городских условиях
+                        Тест-драйв Geely Xingyue L в городских условиях
                     </p>
                 </div>
             </div>

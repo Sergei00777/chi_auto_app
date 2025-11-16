@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Geely Icon - CHI AUTO</title>
+    <title>Аренда FAW Bestune B70 - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,20 +18,20 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/geely_icon.jpg') }}" alt="Geely Icon">
+                <img src="{{ url_for('static', filename='images/faw_bestune.jpg') }}" alt="FAW Bestune B70">
             </div>
             <div class="car-info">
-                <h3>Geely Icon</h3>
-                <p class="year">2021 г.</p>
+                <h3>FAW Bestune B70</h3>
+                <p class="year">2024 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price"> от 5 000 ₽</span>
+                        <span class="price">6 500 ₽</span>
                     </div>
                     <div class="price-row" style="color: #94a3b8; font-size: 14px;">
                         <span>от 10 дней</span>
-                        <span class="price">4 000 ₽</span>
+                        <span class="price">5 500 ₽</span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Geely Icon')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('FAW Bestune B70')">Арендовать</button>
             </div>
         </div>
 
@@ -57,15 +57,15 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Geely Icon</span>
+                        <span class="spec-value">FAW Bestune B70</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2020</span>
+                        <span class="spec-value">2024</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Поколение</span>
-                        <span class="spec-value">I (2019—2025)</span>
+                        <span class="spec-value">II (обновленная модель с 2024)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
@@ -73,11 +73,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Класс авто</span>
-                        <span class="spec-value">Комфорт</span>
+                        <span class="spec-value">Комфорт (D-сегмент)</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Цвет</span>
-                        <span class="spec-value">Голубой</span>
+                        <span class="spec-label">Тип кузова</span>
+                        <span class="spec-value">Седан</span>
                     </div>
                 </div>
 
@@ -85,55 +85,107 @@
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
                         <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Бензин 1.5L</span>
+                        <span class="spec-value">Бензин 1.5L Turbo</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">177 л.с.</span>
+                        <span class="spec-value">165 л.с.</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Крутящий момент</span>
+                        <span class="spec-value">258 Н·м</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Роботизированная</span>
+                        <span class="spec-value">7-ступенчатая роботизированная (DCT)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
                         <span class="spec-value">Передний</span>
                     </div>
-                    <div class="spec-row">
-                        <span class="spec-label">Модификация</span>
-                        <span class="spec-value">1.5 AMT (177 л.с.)</span>
-                    </div>
                 </div>
 
                 <div class="spec-group">
-                    <h4>Экстерьер и интерьер</h4>
+                    <h4>Габариты и ходовые качества</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Тип кузова</span>
-                        <span class="spec-value">Внедорожник</span>
+                        <span class="spec-label">Длина / Ширина / Высота</span>
+                        <span class="spec-value">4855 / 1840 / 1455 мм</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Количество дверей</span>
-                        <span class="spec-value">5</span>
+                        <span class="spec-label">Колесная база</span>
+                        <span class="spec-value">2800 мм</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Расположение руля</span>
-                        <span class="spec-value">Левый</span>
+                        <span class="spec-label">Дорожный просвет</span>
+                        <span class="spec-value">135 мм</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Объем багажника</span>
+                        <span class="spec-value">500 литров</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Подвеска</span>
+                        <span class="spec-value">Независимая (McPherson / многорычажная)</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
                     <h4>Комфорт и технологии</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Кондиционер</span>
+                        <span class="spec-label">Панорамная крыша</span>
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Аудиосистема</span>
+                        <span class="spec-label">Кожаный салон</span>
+                        <span class="spec-value">Двухцветный</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Электропривод сидений</span>
                         <span class="spec-value">Есть</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Зарядки для телефонов</span>
-                        <span class="spec-value">Для всех разъемов</span>
+                        <span class="spec-label">Подогрев сидений</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Климат-контроль</span>
+                        <span class="spec-value">Двухзонный</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Мультимедиа</span>
+                        <span class="spec-value">2 экрана по 12.3"</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Apple CarPlay / Android Auto</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Безопасность</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Камера 360°</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Адаптивный круиз-контроль</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Система экстренного торможения</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Помощь при движении по полосе</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Контроль слепых зон</span>
+                        <span class="spec-value">Есть</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Парковочный автопилот</span>
+                        <span class="spec-value">Есть</span>
                     </div>
                 </div>
             </div>
@@ -159,11 +211,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Депозит</span>
-                        <span class="spec-value">10 000 ₽</span>
+                        <span class="spec-value">15 000 ₽</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Возврат депозита</span>
-                        <span class="spec-value">Через 20 дней</span>
+                        <span class="spec-value">Через 14 дней</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Способы оплаты</span>
@@ -179,11 +231,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Доплата за км сверх лимита</span>
-                        <span class="spec-value">15 ₽/км</span>
+                        <span class="spec-value">20 ₽/км</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">КАСКО, ОСАГО без ограничений</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
@@ -201,11 +253,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Возможность добавить водителя</span>
+                        <span>Бесплатная доставка в аэропорт и по городу</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Бесплатная доставка в аэропорт и по городу</span>
+                        <span>Возможность добавить водителя</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -221,7 +273,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Полный пакет документов для физ. и юр. лиц, КАСКО и ОСАГО без ограничений</span>
+                        <span>Полный пакет документов для физ. и юр. лиц, ОСАГО без ограничений</span>
                     </div>
                 </div>
             </div>
@@ -229,23 +281,37 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    ⭐️ Аренда с нами просто, быстро и легко!
+                    ⭐️ Аренда FAW Bestune B70 в Иркутске — флагманский седан D-класса по доступной цене!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Современный и стильный Geely Icon в голубом цвете — идеальный выбор для городских поездок и путешествий.
-                    Яркий дизайн, комфортный салон и экономичный двигатель делают эту модель популярной среди наших клиентов.
+                    FAW Bestune B70 2024 года — это полноразмерный седан, который сочетает в себе просторный салон,
+                    современные технологии и флагманский дизайн. Идеальная альтернатива Hyundai Elantra, Kia Cerato
+                    и Skoda Octavia с более богатым оснащением.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды голубого Geely Icon:</strong><br>
-                    • До 10 дней - 5 000₽/сутки<br>
-                    • Больше 10 дней - 4 000₽/сутки
+                    <strong>Стоимость аренды FAW Bestune B70:</strong><br>
+                    • До 10 дней - 6 500₽/сутки<br>
+                    • Больше 10 дней - 5 500₽/сутки
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Преимущества:</strong><br>
-                    • Аренда автомобиля от суток до бесконечности<br>
-                    • Выбор автомобиля по Вашему запросу<br>
-                    • Эконом/комфорт/премиум классы<br>
-                    • Седан/кроссовер/джип/минивэн
+                    <strong>Ключевые преимущества:</strong><br>
+                    • Просторный салон и багажник 500 литров<br>
+                    • Богатое оснащение: панорамная крыша, кожаный салон<br>
+                    • Два экрана по 12.3", Apple CarPlay, Android Auto<br>
+                    • Полный комплект систем безопасности и помощи водителю<br>
+                    • Мощный турбодвигатель 1.5L (165 л.с.)<br>
+                    • Независимая подвеска для максимального комфорта<br>
+                    • Современный флагманский дизайн
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
+                    <strong>Технологии и безопасность:</strong><br>
+                    • Камера кругового обзора 360°<br>
+                    • Адаптивный круиз-контроль<br>
+                    • Система экстренного торможения<br>
+                    • Помощь при движении по полосе<br>
+                    • Контроль слепых зон<br>
+                    • Парковочный автопилот<br>
+                    • Мониторинг усталости водителя
                 </p>
             </div>
 
@@ -275,22 +341,22 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo1.jpg') }}" alt="Geely Icon вид спереди">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo1.jpg') }}" alt="FAW Bestune B70 вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo2.jpg') }}" alt="Салон Geely Icon">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo2.jpg') }}" alt="Салон FAW Bestune B70">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo3.jpg') }}" alt="Geely Icon вид сзади">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo3.jpg') }}" alt="FAW Bestune B70 вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo4.jpg') }}" alt="Приборная панель с двумя экранами">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo5.jpg') }}" alt="Вид сбоку">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo5.jpg') }}" alt="Панорамная крыша">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/geely_icon/photo6.jpg') }}" alt="Мультимедиа система">
+                    <img src="{{ url_for('static', filename='images/faw_bestune/photo6.jpg') }}" alt="Багажник 500 литров">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -302,15 +368,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Geely Icon</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор FAW Bestune B70 2024</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/faw_bestune/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/faw_bestune/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -319,21 +385,21 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Полный обзор автомобиля с демонстрацией экстерьера и интерьера
+                        Полный обзор флагманского седана с демонстрацией всех технологий и возможностей
                     </p>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв в городе</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв и системы безопасности</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/geely_icon/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/geely_icon/city_drive.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/faw_bestune/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/faw_bestune/safety_systems.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -342,7 +408,7 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Тест-драйв Geely Icon в городских условиях
+                        Демонстрация работы систем безопасности и помощи водителю
                     </p>
                 </div>
             </div>
