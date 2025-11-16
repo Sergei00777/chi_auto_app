@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHI AUTO - Прокат авто</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
@@ -12,9 +12,9 @@
         <!-- Верхняя панель навигации -->
         <nav class="navbar">
             <div class="nav-left">
-                <span class="nav-item active">Все</span>
-                <span class="nav-item">Авто</span>
-                <span class="nav-item">Город</span>
+                <span class="nav-item active">CHI AUTO</span>
+                <span class="nav-item">Прокат авто</span>
+                <span class="nav-item">Иркутск</span>
             </div>
         </nav>
 
@@ -1053,45 +1053,7 @@
     <!-- Контейнер для динамического контента -->
     <div id="pageContainer"></div>
 
-    <!-- Telegram Web App SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
     <script>
-        // Автоматическое полноэкранное отображение для Telegram Mini App
-        function initializeFullScreen() {
-            // Для Telegram WebApp
-            if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
-                Telegram.WebApp.expand();
-                Telegram.WebApp.enableClosingConfirmation();
-                Telegram.WebApp.BackButton.hide();
-            }
-
-            // Устанавливаем высоту контейнера
-            const appContainer = document.querySelector('.container');
-            if (appContainer) {
-                appContainer.style.minHeight = window.innerHeight + 'px';
-            }
-
-            // Добавляем класс полноэкранного режима
-            document.body.classList.add('fullscreen-mode');
-        }
-
-        // Инициализация при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeFullScreen();
-
-            // Дополнительная инициализация после полной загрузки
-            window.addEventListener('load', function() {
-                setTimeout(initializeFullScreen, 500);
-            });
-        });
-
-        // Обработка изменения ориентации/размера
-        window.addEventListener('resize', initializeFullScreen);
-        window.addEventListener('orientationchange', function() {
-            setTimeout(initializeFullScreen, 300);
-        });
-
         // Функция для загрузки модального окна аренды
         async function openRentModal(carName) {
             try {
@@ -1100,9 +1062,6 @@
                 document.getElementById('modalContainer').innerHTML = html;
                 document.getElementById('selectedCar').textContent = carName;
                 document.getElementById('rentModal').style.display = 'flex';
-
-                // Инициализация формы аренды
-                initializeRentForm();
             } catch (error) {
                 console.error('Ошибка загрузки модального окна:', error);
             }
@@ -1117,148 +1076,85 @@
         }
 
         // Функция для загрузки страниц
-        async function openPage(pageType) {
-            try {
-                const response = await fetch(`/${pageType}`);
-                const html = await response.text();
-                document.getElementById('pageContainer').innerHTML = html;
+async function openPage(pageType) {
+    try {
+        const response = await fetch(`/${pageType}`);
+        const html = await response.text();
+        document.getElementById('pageContainer').innerHTML = html;
 
-                // Показываем модальное окно
-                const modal = document.getElementById(`${pageType}Modal`);
-                if (modal) {
-                    modal.style.display = 'flex';
+        // Показываем модальное окно
+        const modal = document.getElementById(`${pageType}Modal`);
+        if (modal) {
+            modal.style.display = 'flex';
 
-                    // Инициализируем FAQ если открыли FAQ страницу
-                    if (pageType === 'faq') {
-                        setTimeout(() => {
-                            initializeFAQ();
-                        }, 100);
-                    }
+            // Инициализируем FAQ если открыли FAQ страницу
+            if (pageType === 'faq') {
+                setTimeout(() => {
+                    // Переинициализируем FAQ после загрузки
+                    const faqQuestions = document.querySelectorAll('.faq-question');
+                    faqQuestions.forEach(question => {
+                        question.addEventListener('click', function() {
+                            const faqItem = this.parentElement;
+                            const isActive = faqItem.classList.contains('active');
 
-                    // Инициализируем контакты если открыли контакты
-                    if (pageType === 'contacts') {
-                        setTimeout(() => {
-                            initializeContacts();
-                        }, 100);
-                    }
-                }
-            } catch (error) {
-                console.error('Ошибка загрузки страницы:', error);
-            }
-        }
+                            // Закрываем все другие открытые вопросы
+                            document.querySelectorAll('.faq-item.active').forEach(item => {
+                                if (item !== faqItem) {
+                                    item.classList.remove('active');
+                                }
+                            });
 
-        // Функция инициализации FAQ
-        function initializeFAQ() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const faqItem = this.parentElement;
-                    const isActive = faqItem.classList.contains('active');
-
-                    // Закрываем все другие открытые вопросы
-                    document.querySelectorAll('.faq-item.active').forEach(item => {
-                        if (item !== faqItem) {
-                            item.classList.remove('active');
-                        }
-                    });
-
-                    // Переключаем текущий вопрос
-                    if (!isActive) {
-                        faqItem.classList.add('active');
-                    } else {
-                        faqItem.classList.remove('active');
-                    }
-                });
-            });
-
-            // Автоматически открываем первый вопрос
-            const firstFaqItem = document.querySelector('.faq-item');
-            if (firstFaqItem && !firstFaqItem.classList.contains('active')) {
-                firstFaqItem.classList.add('active');
-            }
-
-            // Инициализируем поиск
-            const searchInput = document.getElementById('faqSearch');
-            if (searchInput) {
-                searchInput.addEventListener('input', function(e) {
-                    const query = e.target.value.toLowerCase().trim();
-                    const faqItems = document.querySelectorAll('.faq-item');
-
-                    if (query === '') {
-                        faqItems.forEach(item => {
-                            item.style.display = 'block';
-                        });
-                        return;
-                    }
-
-                    faqItems.forEach(item => {
-                        const question = item.querySelector('.faq-question span').textContent.toLowerCase();
-                        const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
-
-                        if (question.includes(query) || answer.includes(query)) {
-                            item.style.display = 'block';
-                            if (!item.classList.contains('active')) {
-                                item.classList.add('active');
+                            // Переключаем текущий вопрос
+                            if (!isActive) {
+                                faqItem.classList.add('active');
+                            } else {
+                                faqItem.classList.remove('active');
                             }
-                        } else {
-                            item.style.display = 'none';
-                        }
+                        });
                     });
-                });
+
+                    // Автоматически открываем первый вопрос
+                    const firstFaqItem = document.querySelector('.faq-item');
+                    if (firstFaqItem && !firstFaqItem.classList.contains('active')) {
+                        firstFaqItem.classList.add('active');
+                    }
+
+                    // Инициализируем поиск
+                    const searchInput = document.getElementById('faqSearch');
+                    if (searchInput) {
+                        searchInput.addEventListener('input', function(e) {
+                            const query = e.target.value.toLowerCase().trim();
+                            const faqItems = document.querySelectorAll('.faq-item');
+
+                            if (query === '') {
+                                faqItems.forEach(item => {
+                                    item.style.display = 'block';
+                                });
+                                return;
+                            }
+
+                            faqItems.forEach(item => {
+                                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+
+                                if (question.includes(query) || answer.includes(query)) {
+                                    item.style.display = 'block';
+                                    if (!item.classList.contains('active')) {
+                                        item.classList.add('active');
+                                    }
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        });
+                    }
+                }, 100);
             }
         }
-
-        // Функция инициализации контактов
-        function initializeContacts() {
-            // Добавляем обработчики для кнопок мессенджеров
-            const whatsappBtn = document.querySelector('.social-btn.whatsapp');
-            const telegramBtn = document.querySelector('.social-btn.telegram');
-
-            if (whatsappBtn) {
-                whatsappBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.open('https://wa.me/79245304814', '_blank');
-                });
-            }
-
-            if (telegramBtn) {
-                telegramBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.open('https://t.me/ViktoriA_K_5', '_blank');
-                });
-            }
-        }
-
-        // Функция инициализации формы аренды
-        function initializeRentForm() {
-            const rentForm = document.getElementById('rentForm');
-            if (rentForm) {
-                rentForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    handleRentFormSubmit();
-                });
-            }
-        }
-
-        // Функция обработки отправки формы аренды
-        function handleRentFormSubmit() {
-            const formData = new FormData(document.getElementById('rentForm'));
-            const carName = document.getElementById('selectedCar').textContent;
-
-            // Здесь можно добавить отправку данных на сервер
-            console.log('Данные аренды:', {
-                car: carName,
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                startDate: formData.get('start_date'),
-                endDate: formData.get('end_date')
-            });
-
-            // Показываем сообщение об успехе
-            alert(`Заявка на аренду ${carName} отправлена! Мы свяжемся с вами в ближайшее время.`);
-            closeRentModal();
-        }
-
+    } catch (error) {
+        console.error('Ошибка загрузки страницы:', error);
+    }
+}
         // Функция закрытия модальных окон
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -1303,72 +1199,6 @@
         function openMainPage() {
             window.location.href = '/';
         }
-
-        // Предотвращаем масштабирование на iOS
-        document.addEventListener('touchmove', function (event) {
-            if (event.scale !== 1) {
-                event.preventDefault();
-            }
-        }, { passive: false });
-
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            const now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-
-        // Стили для полноэкранного режима
-        const fullscreenStyles = `
-            .fullscreen-mode {
-                position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                width: 100vw !important;
-                height: 100vh !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden !important;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                overflow: hidden;
-                background: #0f172a;
-                -webkit-user-select: none;
-                -webkit-touch-callout: none;
-                -webkit-tap-highlight-color: transparent;
-            }
-
-            .container {
-                min-height: 100vh;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            /* Скрываем скроллбар но оставляем функциональность */
-            ::-webkit-scrollbar {
-                display: none;
-            }
-
-            /* Улучшаем отзывчивость на мобильных устройствах */
-            @media (max-width: 768px) {
-                body {
-                    position: fixed;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        `;
-
-        // Добавляем стили в документ
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = fullscreenStyles;
-        document.head.appendChild(styleSheet);
     </script>
 </body>
 </html>
