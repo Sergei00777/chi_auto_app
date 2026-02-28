@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда Toyota Corolla Cross - CHI AUTO</title>
+    <title>Аренда Zeekr 001 - CHI AUTO</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -18,20 +18,20 @@
         <!-- Основная информация -->
         <div class="car-card">
             <div class="car-image">
-                <img src="{{ url_for('static', filename='images/toyota_corolla_cross.jpg') }}" alt="Toyota Corolla Cross">
+                <img src="{{ url_for('static', filename='images/zeekr_001.jpg') }}" alt="Zeekr 001">
             </div>
             <div class="car-info">
-                <h3>Toyota Corolla Cross</h3>
-                <p class="year">2024 г.</p>
+                <h3>Zeekr 001</h3>
+                <p class="year">2023 г.</p>
 
                 <div class="price-section">
                     <div class="price-row">
                         <span>Цена на сутки</span>
-                        <span class="price">8 500 ₽</span>
+                        <span class="price">15 000 ₽</span>
                     </div>
                     <div class="price-row" style="color: #94a3b8; font-size: 14px;">
-                        <span>от 10 дней</span>
-                        <span class="price">7 500 ₽</span>
+                        <span>от 7 дней</span>
+                        <span class="price">14 000 ₽</span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
             </div>
 
             <div class="actions">
-                <button class="btn-rent" onclick="openRentModal('Toyota Corolla Cross')">Арендовать</button>
+                <button class="btn-rent" onclick="openRentModal('Zeekr 001')">Арендовать</button>
             </div>
         </div>
 
@@ -57,15 +57,15 @@
                     <h4>Основные характеристики</h4>
                     <div class="spec-row">
                         <span class="spec-label">Марка и модель</span>
-                        <span class="spec-value">Toyota Corolla Cross</span>
+                        <span class="spec-value">Zeekr 001</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Год выпуска</span>
-                        <span class="spec-value">2024</span>
+                        <span class="spec-value">2023</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Класс авто</span>
-                        <span class="spec-value">Компактный кроссовер</span>
+                        <span class="spec-value">Премиальный электрокроссовер</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Состояние</span>
@@ -73,39 +73,67 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Тип кузова</span>
-                        <span class="spec-value">Кроссовер</span>
+                        <span class="spec-value">Фастбэк / Shooting Brake</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Привод</span>
-                        <span class="spec-value">Передний (2WD)</span>
+                        <span class="spec-value">Полный (4WD)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Руль</span>
+                        <span class="spec-value">Левый</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
                     <h4>Двигатель и трансмиссия</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Двигатель</span>
-                        <span class="spec-value">Бензин 2.0L Dynamic Force</span>
+                        <span class="spec-label">Тип двигателя</span>
+                        <span class="spec-value">Электрический</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Мощность</span>
-                        <span class="spec-value">171 л.с.</span>
+                        <span class="spec-value">544 л.с.</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Крутящий момент</span>
-                        <span class="spec-value">205 Н·м</span>
+                        <span class="spec-value">768 Н·м</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Коробка передач</span>
-                        <span class="spec-value">Вариатор Direct Shift-CVT</span>
+                        <span class="spec-label">Разгон 0-100 км/ч</span>
+                        <span class="spec-value">3.8 секунды</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Топливо</span>
-                        <span class="spec-value">АИ-95</span>
+                        <span class="spec-label">Трансмиссия</span>
+                        <span class="spec-value">Редуктор (1-ступенчатая)</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Расход топлива</span>
-                        <span class="spec-value">6.5-7.5 л/100 км</span>
+                        <span class="spec-label">Запас хода</span>
+                        <span class="spec-value">до 650 км (по WLTP)</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h4>Аккумулятор и зарядка</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Тип батареи</span>
+                        <span class="spec-value">Литий-ионная NMC</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Ёмкость батареи</span>
+                        <span class="spec-value">100 кВт·ч</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Быстрая зарядка (DC)</span>
+                        <span class="spec-value">до 360 кВт (5-80% за 30 мин)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Медленная зарядка (AC)</span>
+                        <span class="spec-value">до 22 кВт (0-100% за 5.5 ч)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Ватт на км (расход)</span>
+                        <span class="spec-value">18-22 кВт·ч/100 км</span>
                     </div>
                 </div>
 
@@ -113,23 +141,27 @@
                     <h4>Габариты и ходовые качества</h4>
                     <div class="spec-row">
                         <span class="spec-label">Длина / Ширина / Высота</span>
-                        <span class="spec-value">4460 / 1825 / 1620 мм</span>
+                        <span class="spec-value">4970 / 1999 / 1548 мм</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Колесная база</span>
-                        <span class="spec-value">2640 мм</span>
+                        <span class="spec-value">3005 мм</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Дорожный просвет</span>
-                        <span class="spec-value">161 мм</span>
+                        <span class="spec-value">174 мм (регулируемая подвеска)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Объем багажника</span>
-                        <span class="spec-value">487 литров</span>
+                        <span class="spec-value">450 литров (до 1524 л сложив сиденья)</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Подвеска</span>
-                        <span class="spec-value">Независимая McPherson / Торсионная балка</span>
+                        <span class="spec-value">Пневматическая, адаптивная с CDC</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Масса</span>
+                        <span class="spec-value">2430 кг</span>
                     </div>
                 </div>
 
@@ -137,55 +169,63 @@
                     <h4>Комфорт и технологии</h4>
                     <div class="spec-row">
                         <span class="spec-label">Мультимедийный экран</span>
-                        <span class="spec-value">8 дюймов</span>
+                        <span class="spec-value">15.4" сенсорный + 8.8" приборная панель</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Apple CarPlay / Android Auto</span>
-                        <span class="spec-value">Проводное</span>
+                        <span class="spec-label">Продвинутая мультимедиа</span>
+                        <span class="spec-value">5G, Wi-Fi, OTA обновления, Яндекс.Авто</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Климат-контроль</span>
-                        <span class="spec-value">Двухзонный</span>
+                        <span class="spec-value">Трехзонный + очиститель воздуха</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Круиз-контроль</span>
-                        <span class="spec-value">Адаптивный</span>
+                        <span class="spec-value">Адаптивный с функцией Stop & Go</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Аудиосистема</span>
-                        <span class="spec-value">6 динамиков</span>
+                        <span class="spec-value">Yamaha Premium, 12 динамиков</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Светодиодная оптика</span>
-                        <span class="spec-value">Полностью</span>
+                        <span class="spec-value">Matrix LED, адаптивный дальний свет</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Панорамная крыша</span>
+                        <span class="spec-value">Электрохромная (затемняемая)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Бесключевой доступ</span>
+                        <span class="spec-value">Ключ-карта, смартфон, Bluetooth</span>
                     </div>
                 </div>
 
                 <div class="spec-group">
-                    <h4>Безопасность Toyota Safety Sense 2.5+</h4>
+                    <h4>Безопасность и помощники водителя</h4>
                     <div class="spec-row">
-                        <span class="spec-label">Адаптивный круиз-контроль</span>
-                        <span class="spec-value">С функцией Stop & Go</span>
+                        <span class="spec-label">Система помощи водителю</span>
+                        <span class="spec-value">ZEEKR AD (уровень 2+)</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Помощь удержания в полосе</span>
-                        <span class="spec-value">LTA система</span>
+                        <span class="spec-label">Автопилот на трассе</span>
+                        <span class="spec-value">Автоматические перестроения, NOA</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Автоматическое экстренное торможение</span>
-                        <span class="spec-value">С распознаванием пешеходов</span>
+                        <span class="spec-label">Парковочный автопилот</span>
+                        <span class="spec-value">Автоматическая парковка (APA)</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Распознавание дорожных знаков</span>
-                        <span class="spec-value">RSA система</span>
+                        <span class="spec-label">Системы активной безопасности</span>
+                        <span class="spec-value">AEB, LDW, LKA, BSD, RCTA</span>
                     </div>
                     <div class="spec-row">
-                        <span class="spec-label">Автоматический дальний свет</span>
-                        <span class="spec-value">AHB система</span>
+                        <span class="spec-label">Камеры и датчики</span>
+                        <span class="spec-value">7 камер, 12 ультразвуковых, 1 лидар</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Подушки безопасности</span>
-                        <span class="spec-value">7 шт</span>
+                        <span class="spec-value">8 шт (включая коленные)</span>
                     </div>
                 </div>
             </div>
@@ -199,11 +239,11 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Минимальный возраст</span>
-                        <span class="spec-value">21 год</span>
+                        <span class="spec-value">23 года</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Минимальный стаж</span>
-                        <span class="spec-value">2 года</span>
+                        <span class="spec-value">3 года</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Гражданство</span>
@@ -211,7 +251,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Депозит</span>
-                        <span class="spec-value">20 000 ₽</span>
+                        <span class="spec-value">50 000 ₽</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Возврат депозита</span>
@@ -227,19 +267,23 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Лимит пробега</span>
-                        <span class="spec-value">250 км/сутки</span>
+                        <span class="spec-value">300 км/сутки</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Доплата за км сверх лимита</span>
-                        <span class="spec-value">25 ₽/км</span>
+                        <span class="spec-value">30 ₽/км</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Страховка</span>
-                        <span class="spec-value">КАСКО, ОСАГО без ограничений</span>
+                        <span class="spec-value">ОСАГО без ограничений</span>
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">Документы</span>
                         <span class="spec-value">Паспорт и водительское удостоверение РФ</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Зарядка электромобиля</span>
+                        <span class="spec-value">-</span>
                     </div>
                 </div>
             </div>
@@ -261,7 +305,7 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Автомобили всегда чистые, полностью заправлены и в безупречном техническом состоянии</span>
+                        <span>Автомобили всегда чистые, полностью заряжены и в безупречном техническом состоянии</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -269,7 +313,11 @@
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
-                        <span>Зарядки для всех типов телефонов</span>
+                        <span>Зарядные кабели Type 2 (AC) и CCS2 (DC)</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                        <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
+                        <span>Карта для бесплатной зарядки на партнерских ЭЗС</span>
                     </div>
                     <div style="display: flex; align-items: flex-start; gap: 8px;">
                         <i class='bx bx-check' style="color: #10b981; font-size: 18px; margin-top: 2px;"></i>
@@ -281,44 +329,51 @@
             <div class="detail-specs">
                 <h4 style="color: #3b82f6; margin-bottom: 15px;">Описание</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
-                    ⭐️ Аренда Toyota Corolla Cross в Иркутске — надежность и комфорт от мирового лидера!
+                    ⚡️ Аренда Zeekr 001 в Иркутске — эксклюзивный премиальный электрокар нового поколения!
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    Toyota Corolla Cross — это идеальное сочетание практичности знаменитого Corolla
-                    и популярного SUV-кузова. Надежный, экономичный и оснащенный передовыми системами
-                    безопасности — идеальный выбор для семейных поездок и ежедневной эксплуатации.
+                    Zeekr 001 — это революционный электрический фастбэк от премиального бренда Geely.
+                    Мощность 544 л.с., разгон до 100 км/ч за 3.8 секунды и запас хода до 650 км.
+                    Уникальный дизайн в стиле shooting brake сочетается с передовыми технологиями и роскошной отделкой.
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Стоимость аренды Toyota Corolla Cross:</strong><br>
-                    • До 10 дней - 8 500₽/сутки<br>
-                    • Больше 10 дней - 7 500₽/сутки
+                    <strong>Стоимость аренды Zeekr 001: Стоимость аренды зависит от сезона и срока. При долгосрочной аренде предоставляется скидка. Актуальные суточные тарифы уточняйте у Менеджера!</strong><br>
+                    • До 10 дней - 15 000₽/сутки<br>
+                    • От 10 дней - 14 000₽/сутки<br>
+                    • Месячная аренда - от 280 000₽ (уточняйте у менеджера)
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
                     <strong>Ключевые преимущества:</strong><br>
-                    • Легендарная надежность Toyota<br>
-                    • Экономичный двигатель 2.0L (171 л.с.)<br>
-                    • Расход топлива всего 6.5-7.5 л/100 км<br>
-                    • Продвинутый вариатор Direct Shift-CVT<br>
-                    • Полный комплект Toyota Safety Sense 2.5+<br>
-                    • Качественная шумоизоляция<br>
-                    • Практичный салон и багажник 487 л<br>
-                    • Высокая остаточная стоимость
+                    • 544 л.с. и 768 Н·м момента — мгновенный разгон<br>
+                    • Запас хода до 650 км (реальный 500-550 км)<br>
+                    • Быстрая зарядка 5-80% за 30 минут<br>
+                    • Пневматическая подвеска с адаптивным демпфированием<br>
+                    • Премиальная аудиосистема Yamaha с 12 динамиками<br>
+                    • Электрохромная панорамная крыша<br>
+                    • Продвинутый автопилот ZEEKR AD (уровень 2+)<br>
+                    • Качественная отделка салона экологичными материалами
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
-                    <strong>Системы безопасности Toyota Safety Sense:</strong><br>
-                    • Адаптивный круиз-контроль с Stop & Go<br>
-                    • Помощь удержания в полосе (LTA)<br>
-                    • Автоматическое экстренное торможение<br>
-                    • Распознавание дорожных знаков<br>
-                    • Автоматический дальний свет<br>
-                    • 7 подушек безопасности
+                    <strong>Технологии и безопасность:</strong><br>
+                    • Система помощи водителю ZEEKR AD<br>
+                    • Лидар и 7 камер кругового обзора<br>
+                    • Автоматическая парковка (APA)<br>
+                    • Навигационный автопилот (NOA) на трассах<br>
+                    • Matrix LED фары с адаптивным светом<br>
+                    • 8 подушек безопасности<br>
+                    • Система экстренного торможения AEB<br>
+                    • Контроль слепых зон BSD
                 </p>
                 <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px;">
                     <strong>Идеальный выбор для:</strong><br>
-                    • Семейных поездок — безопасность и комфорт<br>
-                    • Ежедневных поездок по городу — экономичность<br>
-                    • Дальних путешествий — надежность<br>
-                    • Практичных водителей — низкие расходы
+                    • Ценителей технологий и инноваций<br>
+                    • Любителей мощных и быстрых автомобилей<br>
+                    • Деловых поездок — статусный автомобиль<br>
+                    • Дальних путешествий — большой запас хода<br>
+                    • Тех, кто хочет испытать автомобиль будущего уже сегодня
+                </p>
+                <p style="color: #cbd5e1; line-height: 1.6; margin-top: 10px; font-style: italic;">
+
                 </p>
             </div>
 
@@ -348,22 +403,28 @@
         <div id="photos" class="tab-content">
             <div class="photos-grid">
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo1.jpg') }}" alt="Toyota Corolla Cross вид спереди">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo1.jpg') }}" alt="Zeekr 001 вид спереди">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo2.jpg') }}" alt="Салон Toyota Corolla Cross">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo2.jpg') }}" alt="Салон Zeekr 001">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo3.jpg') }}" alt="Toyota Corolla Cross вид сзади">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo3.jpg') }}" alt="Zeekr 001 вид сзади">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo4.jpg') }}" alt="Приборная панель">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo4.jpg') }}" alt="Приборная панель и экран">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo5.jpg') }}" alt="Багажник 487 литров">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo5.jpg') }}" alt="Багажник 450 литров">
                 </div>
                 <div class="photo-item">
-                    <img src="{{ url_for('static', filename='images/toyota_corolla_cross/photo6.jpg') }}" alt="Мультимедийная система">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo6.jpg') }}" alt="Панорамная электрохромная крыша">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo7.jpg') }}" alt="Зарядный порт">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ url_for('static', filename='images/zeekr_001/photo8.jpg') }}" alt="Детали салона премиум-класса">
                 </div>
             </div>
             <p style="text-align: center; color: #94a3b8; font-style: italic;">
@@ -375,15 +436,15 @@
             <div class="videos-list">
                 <!-- Видео 1 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">📹 Обзор Toyota Corolla Cross</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">⚡️ Обзор Zeekr 001 - Технологии и дизайн</h4>
                     <div class="video-container">
                         <video
                             id="carVideo1"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/toyota_corolla_cross/video_preview_1.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/toyota_corolla_cross/review.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/zeekr_001/video_preview_1.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/zeekr_001/review.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader1">
@@ -392,21 +453,21 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Полный обзор компактного кроссовера с акцентом на практичность и надежность
+                        Полный обзор электрокроссовера: дизайн, интерьер и основные технологии
                     </p>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
-                    <h4 style="color: white; margin-bottom: 10px;">🚗 Тест-драйв и системы безопасности</h4>
+                    <h4 style="color: white; margin-bottom: 10px;">🚀 Тест-драйв и разгон до 100 км/ч</h4>
                     <div class="video-container">
                         <video
                             id="carVideo2"
                             controls
                             preload="metadata"
                             style="width: 100%; height: 100%; border-radius: 12px;"
-                            poster="{{ url_for('static', filename='images/toyota_corolla_cross/video_preview_2.jpg') }}">
-                            <source src="{{ url_for('static', filename='videos/toyota_corolla_cross/safety.mp4') }}" type="video/mp4">
+                            poster="{{ url_for('static', filename='images/zeekr_001/video_preview_2.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/zeekr_001/acceleration.mp4') }}" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                         <div class="video-loader" id="videoLoader2">
@@ -415,7 +476,30 @@
                         </div>
                     </div>
                     <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
-                        Демонстрация работы систем Toyota Safety Sense 2.5+
+                        Демонстрация мощности 544 л.с. - разгон за 3.8 секунды
+                    </p>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="video-item">
+                    <h4 style="color: white; margin-bottom: 10px;">🤖 Работа автопилота ZEEKR AD</h4>
+                    <div class="video-container">
+                        <video
+                            id="carVideo3"
+                            controls
+                            preload="metadata"
+                            style="width: 100%; height: 100%; border-radius: 12px;"
+                            poster="{{ url_for('static', filename='images/zeekr_001/video_preview_3.jpg') }}">
+                            <source src="{{ url_for('static', filename='videos/zeekr_001/autopilot.mp4') }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        <div class="video-loader" id="videoLoader3">
+                            <i class='bx bx-loader-alt bx-spin'></i>
+                            <p>Загрузка демонстрации...</p>
+                        </div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 8px;">
+                        Автоматические перестроения, адаптивный круиз-контроль и парковочный автопилот
                     </p>
                 </div>
             </div>
